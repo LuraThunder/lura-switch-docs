@@ -1,0 +1,1 @@
+"use strict";(globalThis.webpackChunklura_switch_docs=globalThis.webpackChunklura_switch_docs||[]).push([[1183],{5144(a){a.exports=JSON.parse('{"metadata":{"permalink":"/lura-switch-docs/blog","page":1,"postsPerPage":10,"totalPages":1,"totalCount":1,"blogDescription":"Blog","blogTitle":"Blog"}}')}}]);
