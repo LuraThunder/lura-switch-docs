@@ -1,0 +1,1 @@
+"use strict";(globalThis.webpackChunklura_switch_docs=globalThis.webpackChunklura_switch_docs||[]).push([[1903],{1912(s){s.exports=JSON.parse('{"blogBasePath":"/lura-switch-docs/blog","blogTitle":"Blog","authorsListPath":"/lura-switch-docs/blog/authors"}')}}]);
