@@ -10,8 +10,8 @@ import {themes as prismThemes} from 'prism-react-renderer';
 
 /** @type {import('@docusaurus/types').Config} */
 const config = {
-  title: 'My Site',
-  tagline: 'Dinosaurs are cool',
+  title: 'Lura Switch 2 説明書',
+  tagline: 'VRChat向けギミックシステム LuraSwitch2 の公式ドキュメント',
   favicon: 'img/favicon.ico',
 
   // Future flags, see https://docusaurus.io/docs/api/docusaurus-config#future
@@ -30,14 +30,14 @@ const config = {
   organizationName: 'LuraThunder', // Usually your GitHub org/user name.
   projectName: 'lura-switch-docs', // Usually your repo name.
 
-  onBrokenLinks: 'throw',
+  onBrokenLinks: 'warn',
 
   // Even if you don't use internationalization, you can use this field to set
   // useful metadata like html lang. For example, if your site is Chinese, you
   // may want to replace "en" with "zh-Hans".
   i18n: {
-    defaultLocale: 'en',
-    locales: ['en'],
+    defaultLocale: 'ja',
+    locales: ['ja'],
   },
 
   presets: [
@@ -83,9 +83,9 @@ const config = {
         respectPrefersColorScheme: true,
       },
       navbar: {
-        title: 'My Site',
+        title: 'LuraSwitch2',
         logo: {
-          alt: 'My Site Logo',
+          alt: 'LuraSwitch2 Logo',
           src: 'img/logo.svg',
         },
         items: [
@@ -93,11 +93,11 @@ const config = {
             type: 'docSidebar',
             sidebarId: 'tutorialSidebar',
             position: 'left',
-            label: 'Tutorial',
+            label: 'ドキュメント',
           },
-          {to: '/blog', label: 'Blog', position: 'left'},
+          {to: '/blog', label: 'ブログ', position: 'left'},
           {
-            href: 'https://github.com/facebook/docusaurus',
+            href: 'https://github.com/LuraThunder/lura-switch-docs',
             label: 'GitHub',
             position: 'right',
           },
@@ -107,46 +107,42 @@ const config = {
         style: 'dark',
         links: [
           {
-            title: 'Docs',
+            title: 'ドキュメント',
             items: [
               {
-                label: 'Tutorial',
+                label: 'はじめに',
                 to: '/docs/intro',
               },
             ],
           },
           {
-            title: 'Community',
+            title: 'コミュニティ',
             items: [
               {
-                label: 'Stack Overflow',
-                href: 'https://stackoverflow.com/questions/tagged/docusaurus',
+                label: 'X (Twitter)',
+                href: 'https://x.com/LuraThunder',
               },
               {
-                label: 'Discord',
-                href: 'https://discordapp.com/invite/docusaurus',
-              },
-              {
-                label: 'X',
-                href: 'https://x.com/docusaurus',
+                label: 'GitHub',
+                href: 'https://github.com/LuraThunder',
               },
             ],
           },
           {
-            title: 'More',
+            title: 'その他',
             items: [
               {
-                label: 'Blog',
+                label: 'ブログ',
                 to: '/blog',
               },
               {
-                label: 'GitHub',
-                href: 'https://github.com/facebook/docusaurus',
+                label: 'BOOTH',
+                href: 'https://lurathunder.booth.pm/',
               },
             ],
           },
         ],
-        copyright: `Copyright © ${new Date().getFullYear()} My Project, Inc. Built with Docusaurus.`,
+        copyright: `Copyright © ${new Date().getFullYear()} LuraThunder. Built with Docusaurus.`,
       },
       prism: {
         theme: prismThemes.github,

@@ -1,0 +1,8 @@
+{
+  "label": "FAQ・トラブルシューティング",
+  "position": 5,
+  "link": {
+    "type": "generated-index",
+    "description": "よくある質問とトラブルシューティングのガイド。"
+  }
+}

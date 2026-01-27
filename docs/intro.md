@@ -2,46 +2,82 @@
 sidebar_position: 1
 ---
 
-# Tutorial Intro
+# LuraSwitch2 へようこそ
 
-Let's discover **Docusaurus in less than 5 minutes**.
+![LuraSwitch2](/img/TitleSwitches.png)
 
-## Getting Started
+**LuraSwitch2** は VRChat ワールド制作のための統合ギミックシステムです。
 
-Get started by **creating a new site**.
+## LuraSwitch2 とは？
 
-Or **try Docusaurus immediately** with **[docusaurus.new](https://docusaurus.new)**.
+LuraSwitch2 は、VRChat ワールド内で様々な要素を簡単に制御できる Udon Sharp ベースのギミックシステムです。ライト、オーディオ、オブジェクトの表示/非表示など、ワールド制作でよく使われる機能をプレハブとして提供しています。
 
-### What you'll need
+## 主な特徴
 
-- [Node.js](https://nodejs.org/en/download/) version 20.0 or above:
-  - When installing Node.js, you are recommended to check all checkboxes related to dependencies.
+### 🎮 スイッチシステム
 
-## Generate a new site
+- **モダンなデザイン**: かっこいいデザインに一新
+- **2D/3Dモード**: 簡単に切り替え可能
+- **テキスト表示**: スイッチにテキストを入れられる
+- **ワールドセーブ対応**: Local モードで状態を保存
+- **エディタプレビュー**: On/Off 状態をエディタ上で確認可能
 
-Generate a new Docusaurus site using the **classic template**.
+### 📊 スライダーシステム
 
-The classic template will automatically be added to your project after you run the command:
+- **かっこいいデザイン**: モダンなスライダーUI
+- **10%スナップ**: 10%ずつにスナップする仕様
+- **2Dモード対応**: 快適な操作感の2Dスライダー
+- **縦横切り替え**: Vertical/Horizontal モード選択可能
+- **値の保存**: Local Save モードで値を保存
+- **同期機能**: Global モードで同期も可能
 
-```bash
-npm init docusaurus@latest my-website classic
-```
+### 🔄 モードスイッチ
 
-You can type this command into Command Prompt, Powershell, Terminal, or any other integrated terminal of your code editor.
+- **排他制御**: 複数のスイッチから1つだけを選択
+- **連動機能**: 他のスイッチと連動可能
+- **専用UI**: 標準スイッチまたは小型専用スイッチを使用可能
 
-The command also installs all necessary dependencies you need to run Docusaurus.
+### 🛠️ ユーティリティ機能
 
-## Start your site
+- **LuraMirror**: 簡単セットアップの高性能ミラー
+- **LuraCollider**: 見た目が良いアニメーション付きコライダー
+- **SwitchBoard**: 自動で最寄りホルダーに移動する便利な2Dスイッチパネル
+- **SwitchSyncer**: 複数のスイッチ・スライダーを簡単に連動
+- **HeightOffsetter**: 身長に応じて自動で高さが変わるスイッチ
 
-Run the development server:
+## スイッチの種類
 
-```bash
-cd my-website
-npm run start
-```
+LuraSwitch2 には以下のようなスイッチが用意されています：
 
-The `cd` command changes the directory you're working with. In order to work with your newly created Docusaurus site, you'll need to navigate the terminal there.
+### オブジェクト切り替えスイッチ
 
-The `npm run start` command builds your website locally and serves it through a development server, ready for you to view at http://localhost:3000/.
+カラー分類で機能を識別できます：
 
-Open `docs/intro.md` (this page) and edit some lines: the site **reloads automatically** and displays your changes.
+- **White**: Mirror（ミラー）
+- **Orange**: Object（オブジェクト）、Pen（ペン）、Key（キー）
+- **Pink**: Audio（オーディオ）、Video（ビデオ）、Music（音楽）
+- **Blue**: Chair（椅子）、LiteMode（軽量モード）
+- **Green**: Bed（ベッド）、Collider（コライダー）
+- **Purple**: PostEffect（ポストエフェクト）、Night（昼夜）、Effect（エフェクト）
+- **Warm**: AvatarLight（アバターライト）、Light（ライト）
+
+### 外部スクリプト呼び出しスイッチ
+
+- **Light Green**: Teleport（テレポート）、Reset（リセット）
+
+## はじめに
+
+LuraSwitch2 の使用を開始するには、以下のドキュメントをご覧ください：
+
+### 必要なもの
+
+- Unity 2022.3.6f1 以上
+- VRChat SDK3 - Worlds
+- UdonSharp 1.x
+
+### 次のステップ
+
+1. [インストール](./getting-started/installation.md) - LuraSwitch2 の導入方法
+2. [基本的な使い方](./getting-started/basic-usage.md) - 最初のスイッチを設置
+3. [スイッチ一覧](./switches/overview.md) - すべてのスイッチコンポーネント
+4. [ユーティリティ](./utilities/lura-mirror.md) - LuraMirror などの便利機能

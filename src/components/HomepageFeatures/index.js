@@ -4,32 +4,32 @@ import styles from './styles.module.css';
 
 const FeatureList = [
   {
-    title: 'Easy to Use',
+    title: '簡単に使える',
     Svg: require('@site/static/img/undraw_docusaurus_mountain.svg').default,
     description: (
       <>
-        Docusaurus was designed from the ground up to be easily installed and
-        used to get your website up and running quickly.
+        プレハブをドラッグ&ドロップするだけで、様々なギミックをワールドに追加できます。
+        VRChatのUdonやアニメーションの知識がなくても簡単に使えます。
       </>
     ),
   },
   {
-    title: 'Focus on What Matters',
+    title: '豊富なコンポーネント',
     Svg: require('@site/static/img/undraw_docusaurus_tree.svg').default,
     description: (
       <>
-        Docusaurus lets you focus on your docs, and we&apos;ll do the chores. Go
-        ahead and move your docs into the <code>docs</code> directory.
+        Switch（オン/オフ切り替え）とSlider（連続値調整）の2種類のインターフェースで、
+        ライト、オーディオ、オブジェクト表示など様々な要素を制御できます。
       </>
     ),
   },
   {
-    title: 'Powered by React',
+    title: 'VRChat向けに最適化',
     Svg: require('@site/static/img/undraw_docusaurus_react.svg').default,
     description: (
       <>
-        Extend or customize your website layout by reusing React. Docusaurus can
-        be extended while reusing the same header and footer.
+        VRChatのUdon Sharpを使用し、Quest対応や軽量化にも配慮。
+        ワールド制作者が自由にカスタマイズできる柔軟な設計です。
       </>
     ),
   },

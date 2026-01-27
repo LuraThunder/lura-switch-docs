@@ -1,19 +1,24 @@
-facebook:
-  label: Facebook
-  permalink: /facebook
-  description: Facebook tag description
+vrchat:
+  label: VRChat
+  permalink: /vrchat
+  description: VRChat関連の記事
 
-hello:
-  label: Hello
-  permalink: /hello
-  description: Hello tag description
+update:
+  label: アップデート
+  permalink: /update
+  description: LuraSwitch2のアップデート情報
 
-docusaurus:
-  label: Docusaurus
-  permalink: /docusaurus
-  description: Docusaurus tag description
+tutorial:
+  label: チュートリアル
+  permalink: /tutorial
+  description: チュートリアル記事
 
-hola:
-  label: Hola
-  permalink: /hola
-  description: Hola tag description
+tips:
+  label: Tips
+  permalink: /tips
+  description: 使い方のヒント
+
+udonsharp:
+  label: UdonSharp
+  permalink: /udonsharp
+  description: UdonSharp関連の記事

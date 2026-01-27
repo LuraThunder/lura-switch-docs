@@ -1,0 +1,8 @@
+{
+  "label": "スイッチ",
+  "position": 3,
+  "link": {
+    "type": "generated-index",
+    "description": "オン/オフを切り替えるスイッチコンポーネントの詳細なドキュメント。"
+  }
+}
