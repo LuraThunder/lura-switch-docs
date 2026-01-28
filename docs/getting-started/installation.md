@@ -2,35 +2,35 @@
 sidebar_position: 1
 ---
 
-# インストール
+# 📥 インストール
 
-LuraSwitch2 をUnityプロジェクトに導入する方法を説明します。
+LuraSwitch2 を Unity プロジェクトに導入する手順を解説します。
 
-## 必要な環境
+## 📋 必要な環境
 
-LuraSwitch2 を使用するには、以下の環境が必要です：
+LuraSwitch2 を使用するには、以下の環境が必要です。
 
 - **Unity**: 2022.3.6f1 以上
 - **VRChat SDK**: SDK3 - Worlds
 - **UdonSharp**: 1.x
 
-:::info
-VRChat SDK と UdonSharp は VCC (VRChat Creator Companion) を使用してインストールすることを推奨します。
+:::info 💡 推奨ツール
+VRChat SDK と UdonSharp は **VCC (VRChat Creator Companion)** を使用してインストールすることを強く推奨します。
 :::
 
-## インストール手順
+## 🛠️ インストール手順
 
-### 1. パッケージのダウンロード
+### 1️⃣ パッケージのダウンロード
 
-[BOOTH](https://lurathunder.booth.pm/) から LuraSwitch2 の最新版をダウンロードします。
+[BOOTH 商品ページ](https://lura.booth.pm/items/7923735) から LuraSwitch2 の最新版をダウンロードしてください。
 
-### 2. UnityPackage のインポート
+### 2️⃣ UnityPackage のインポート
 
 1. Unity プロジェクトを開く
 2. ダウンロードした `.unitypackage` ファイルをダブルクリック
 3. インポートダイアログで「Import」をクリック
 
-:::tip
+:::tip 💡 初回導入の場合
 初めてインポートする場合は、すべてのファイルをインポートすることを推奨します。
 :::
 
@@ -51,6 +51,9 @@ Assets/
 
 `Assets/QuickBrown/LuraSwitch2/SCENE/LuraSwitch2_SAMPLE.unity` を開くと、各コンポーネントの使用例を確認できます。
 
-## 次のステップ
+## 🎯 次のステップ
 
-インストールが完了したら、[基本的な使い方](./basic-usage.md) を参照して、最初のギミックを設置してみましょう。
+インストールが完了したら、以下を参照して実際に LuraSwitch2 を体験してみましょう。
+
+- ⚡ [クイックスタートガイド](../quick-start.md) — 最速でミラーセットを配置
+- 🎓 [基本的な使い方](./basic-usage.md) — スイッチとスライダーの基礎
