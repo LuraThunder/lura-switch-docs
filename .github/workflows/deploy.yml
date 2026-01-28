@@ -7,16 +7,27 @@ on:
 jobs:
   build-and-deploy:
     runs-on: ubuntu-latest
+    permissions:
+      contents: write
+      pages: write
     steps:
       - uses: actions/checkout@v4
         with:
-          persist-credentials: false
+          # Keep credentials available so the deploy action can push to gh-pages
+          persist-credentials: true
+          fetch-depth: 0
       - name: Use Node.js
         uses: actions/setup-node@v4
         with:
           node-version: '18'
+          cache: 'npm'
       - name: Install dependencies
-        run: npm ci
+        run: |
+          if [ -f package-lock.json ]; then
+            npm ci
+          else
+            npm install
+          fi
       - name: Build site
         run: npm run build
       - name: Deploy to gh-pages
