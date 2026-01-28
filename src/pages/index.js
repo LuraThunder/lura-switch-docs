@@ -22,6 +22,11 @@ function HomepageHeader() {
             to="/docs/intro">
             ドキュメントを読む 📚
           </Link>
+          <Link
+            className="button button--secondary button--lg"
+            to="/docs/quick-start">
+            クイックスタートガイド ⚡
+          </Link>
         </div>
       </div>
     </header>

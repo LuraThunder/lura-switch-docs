@@ -20,4 +20,20 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  gap: 1rem;
+}
+
+/* Ensure hero buttons contrast with dark hero background */
+.heroBanner .button--primary {
+  background-color: var(--site-accent);
+  border-color: var(--site-accent);
+  color: #fff;
+}
+.heroBanner .button--primary:hover {
+  background-color: color-mix(in srgb, var(--site-accent) 75%, black 25%);
+}
+.heroBanner .button--secondary {
+  background: transparent;
+  border-color: rgba(255,255,255,0.18);
+  color: #fff;
 }

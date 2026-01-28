@@ -49,36 +49,44 @@ VRChat にアップロードする前に、必ず Unity のPlay モードで動�
 
 ## 2Dモードと3Dモード
 
-すべてのスイッチとスライダーは、**2Dモード** と **3Dモード** を切り替えられます。
+すべてのスイッチとスライダーは、**2Dモード** と **3Dモード** を切り替えることができます。
 
-![3Dモード](/img/Switch_Mirror_3D.png)
-*3Dモード*
-
-![2Dモード](/img/Switch_Mirror_2D.png)
-*2Dモード*
+<div style={{display: 'flex', gap: '20px', marginBottom: '20px'}}>
+  <div>
+    <img src={require('@site/static/img/Switch_Mirror_3D.png').default} alt="3Dモード" style={{backgroundColor: '#000'}} />
+    <p style={{textAlign: 'center'}}>3Dモード</p>
+  </div>
+  <div>
+    <img src={require('@site/static/img/Switch_Mirror_2D.png').default} alt="2Dモード" style={{backgroundColor: '#000'}} />
+    <p style={{textAlign: 'center'}}>2Dモード</p>
+  </div>
+</div>
 
 Inspector の **SwitchVisualMode** または **SliderVisualMode** を切り替えるだけで、見た目が瞬時に変わります。
 
 ## Switch と Slider の違い
 
-LuraSwitch2 には2種類のインターフェースがあります：
+LuraSwitch2 には2種類のインターフェースがあります。
 
 ### Switch（スイッチ）
 
-- **オン/オフの2状態**を切り替える
-- 例：ライトの点灯/消灯、オブジェクトの表示/非表示
+**オン/オフの2状態**を切り替えます。
+
+**用途例**: ライトの点灯/消灯、オブジェクトの表示/非表示
 
 ### Slider（スライダー）
 
-- **連続的な値**を調整する（0〜100%）
-- 例：ライトの明るさ、音量の調整
-- **10%ずつにスナップ**する仕様
+**連続的な値**を調整します（0〜100%）。
+
+**用途例**: ライトの明るさ、音量の調整
+
+**特徴**: 10%刻みでスナップする正確な操作感を提供します。
 
 ## エディタプレビュー機能
 
-![Inspector画面](/img/Switch_Inspector.jpg)
+<img src={require('@site/static/img/Switch_Inspector.jpg').default} alt="Inspector画面" style={{maxWidth: '600px', display: 'block', margin: '20px 0'}} />
 
-LuraSwitch2 の大きな特徴の1つが、**エディタ上でOn/Off状態を確認できる**ことです。
+LuraSwitch2 の大きな特徴の1つは、**エディタ上でOn/Off状態を確認できる**ことです。
 
 Inspectorで **DefaultState** を切り替えると、シーンビュー上でスイッチの見た目が変化し、On/Off状態を視覚的に確認できます。
 
@@ -88,19 +96,19 @@ Inspectorで **DefaultState** を切り替えると、シーンビュー上で�
 
 全プレイヤーで状態が同期されます。
 
-**用途**: ワールド全体の照明、共有オブジェクト
+**用途例**: ワールド全体の照明、共有オブジェクト
 
 ### Local
 
 各プレイヤーのローカルに保存されます（ワールドセーブ）。
 
-**用途**: 個人の音量設定、ミラー設定
+**用途例**: 個人の音量設定、ミラー設定
 
 ### None
 
-同期も保存もしません。
+同期も保存も行いません。
 
-**用途**: 一時的な設定
+**用途例**: 一時的な設定
 
 ## 次のステップ
 

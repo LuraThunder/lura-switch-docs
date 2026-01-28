@@ -29,9 +29,7 @@ sidebar_position: 3
 
 ### 仕組み
 
-- **SwitchFunction_Teleport** にアクセス
-- **■■■TeleportTarget■■■** の位置・角度へテレポート
-- 暗転フェード演出付き
+**SwitchFunction_Teleport** にアクセスし、**TeleportTarget** の位置・角度へテレポートします。暗転フェード演出が含まれています。
 
 ### 配置ガイド
 
@@ -41,9 +39,9 @@ sidebar_position: 3
 
 ### 使い方
 
-1. `Switch_Teleport.prefab` をシーンに配置
-2. **■■■TeleportTarget■■■** を移動・回転させてテレポート先を設定
-3. 必要に応じてArrowを表示して向きを確認
+1. `Switch_Teleport.prefab` をシーンに配置します
+2. **TeleportTarget** を移動・回転させてテレポート先を設定します
+3. 必要に応じてArrowを表示して向きを確認します
 
 ### 用途例
 
@@ -74,8 +72,7 @@ sidebar_position: 3
 
 ### 仕組み
 
-- **SwitchFunction_Respawn** にアクセス
-- **Switch_Reset** の **Target** に指定したオブジェクトをリセット
+**SwitchFunction_Respawn** にアクセスし、**Switch_Reset** の **Target** に指定したオブジェクトをリセットします。
 
 ### Fukuro Udon対応
 
@@ -85,9 +82,9 @@ Fukuro UdonのManualObjectSyncを使用している場合も、このスイッ�
 
 ### 使い方
 
-1. `Switch_Reset.prefab` をシーンに配置
-2. Inspector の **Target** にリセットしたいオブジェクトを設定
-3. オブジェクトの初期位置を設定（この位置がリセット先になります）
+1. `Switch_Reset.prefab` をシーンに配置します
+2. Inspector の **Target** にリセットしたいオブジェクトを設定します
+3. オブジェクトの初期位置を設定します（この位置がリセット先になります）
 
 ### 用途例
 
@@ -103,9 +100,9 @@ Fukuro UdonのManualObjectSyncを使用している場合も、このスイッ�
 
 ### 作成方法
 
-1. スイッチのプレハブを複製
-2. 呼び出したいUdonスクリプトを作成
-3. スイッチから適切なイベントを送信するように設定
+1. スイッチのプレハブを複製します
+2. 呼び出したいUdonスクリプトを作成します
+3. スイッチから適切なイベントを送信するように設定します
 
 詳しくは [カスタマイズガイド](../advanced/customization.md) をご覧ください。
 
@@ -113,7 +110,7 @@ Fukuro UdonのManualObjectSyncを使用している場合も、このスイッ�
 
 ## 共通の使い方
 
-外部スクリプト呼び出しスイッチも、基本的な操作は通常のスイッチと同じです：
+外部スクリプト呼び出しスイッチも、基本的な操作は通常のスイッチと同じです。
 
 - **SwitchVisualMode**: 3D/2D切り替え
 - **SwitchText**: 表示テキスト設定

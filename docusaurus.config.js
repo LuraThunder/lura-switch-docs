@@ -12,7 +12,7 @@ import {themes as prismThemes} from 'prism-react-renderer';
 const config = {
   title: 'Lura Switch 2 説明書',
   tagline: 'VRChat向けギミックシステム LuraSwitch2 の公式ドキュメント',
-  favicon: 'img/favicon.ico',
+  favicon: 'img/icon.ico',
 
   // Future flags, see https://docusaurus.io/docs/api/docusaurus-config#future
   future: {
@@ -52,21 +52,7 @@ const config = {
           editUrl:
             'https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/',
         },
-        blog: {
-          showReadingTime: true,
-          feedOptions: {
-            type: ['rss', 'atom'],
-            xslt: true,
-          },
-          // Please change this to your repo.
-          // Remove this to remove the "edit this page" links.
-          editUrl:
-            'https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/',
-          // Useful options to enforce blogging best practices
-          onInlineTags: 'warn',
-          onInlineAuthors: 'warn',
-          onUntruncatedBlogPosts: 'warn',
-        },
+        blog: false,
         theme: {
           customCss: './src/css/custom.css',
         },
@@ -83,10 +69,9 @@ const config = {
         respectPrefersColorScheme: true,
       },
       navbar: {
-        title: 'LuraSwitch2',
         logo: {
           alt: 'LuraSwitch2 Logo',
-          src: 'img/logo.svg',
+          src: 'img/Logo_Alpha.png',
         },
         items: [
           {
@@ -95,7 +80,7 @@ const config = {
             position: 'left',
             label: 'ドキュメント',
           },
-          {to: '/blog', label: 'ブログ', position: 'left'},
+          
           {
             href: 'https://github.com/LuraThunder/lura-switch-docs',
             label: 'GitHub',
@@ -131,10 +116,7 @@ const config = {
           {
             title: 'その他',
             items: [
-              {
-                label: 'ブログ',
-                to: '/blog',
-              },
+              
               {
                 label: 'BOOTH',
                 href: 'https://lurathunder.booth.pm/',
