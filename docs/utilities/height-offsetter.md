@@ -4,15 +4,15 @@ sidebar_position: 4
 
 # HeightOffsetter
 
-![HeightOffsetter](/img/HeightOffsetter.png)
+<img src={require('@site/static/img/HeightOffsetter.png').default} alt="HeightOffsetter" style={{maxWidth: '320px'}} />
 
-プレイヤーの身長に応じて、スイッチの高さが自動的に調整される便利なPrefabです。
+プレイヤーの視点高さに応じて、指定した対象オブジェクト群の高さ（Y）を自動調整する Prefab です。
 
 ## 特徴
 
 ### 📏 自動高さ調整
 
-プレイヤーの視点の高さに応じて、スイッチの高さが自動的に調整されます。
+プレイヤーの視点高さを一定間隔でサンプリングし、範囲内にクランプした値をターゲットへ適用します。
 
 小柄なアバターでも、背の高いアバターでも、快適に操作できます。
 
@@ -25,62 +25,43 @@ sidebar_position: 4
 ### 基本的な設置
 
 1. `HeightOffsetter.prefab` をシーンに配置
-2. スイッチやスライダーを HeightOffsetter の子オブジェクトとして配置
-3. パラメータを調整
+2. **ReferenceBox（BoxCollider）** を設定（高さの範囲を決めるボックス）
+3. **OffsetTargets** に高さを動かしたいオブジェクトを登録
+4. 必要に応じてサンプリング間隔・スムージングを調整
 
 ### パラメータ
 
-| パラメータ | 説明 | デフォルト値 |
-|----------|------|------------|
-| BaseHeight | 基準となる高さ | 1.6m |
-| MinHeight | 最小高さ | 1.0m |
-| MaxHeight | 最大高さ | 2.5m |
-| OffsetRatio | 高さ調整の割合 | 1.0 |
+| パラメータ | 説明 |
+|----------|------|
+| ReferenceBox | 高さの範囲を定義する BoxCollider（ワールドYの最小/最大を取得して使用） |
+| OffsetTargets | 高さを調整する対象オブジェクト配列 |
+| HeightPreview | エディタプレビュー用の高さ位置（0.0〜1.0） |
+| Sample Interval Seconds | プレイヤーの高さをサンプリングする間隔（秒） |
+| Height Change Epsilon | 高さ変化の検出閾値。小さな変化は無視して負荷を抑える |
+| Smoothing Tick Frames | スムージング更新間隔（フレーム数） |
+| Move Duration Seconds | 高さ移動のアニメーション時間（秒） |
 
-### BaseHeight の設定
-
-**BaseHeight** は、標準的な身長のプレイヤーを想定した高さです。
-
-```
-推奨値: 1.5m 〜 1.7m
-（アバターの平均的な視点の高さ）
-```
-
-### OffsetRatio の調整
-
-高さ調整の強度を設定します：
-
-- **1.0**: プレイヤーの視点高さに完全に追従
-- **0.5**: 半分だけ追従（緩やかな調整）
-- **0.0**: 追従なし（固定）
+:::tip
+ReferenceBox を上下に調整すると、プレイヤー身長に対する追従範囲（最小/最大Y）が直感的に作れます。
+:::
 
 ## 用途例
 
 ### 誰でも使えるスイッチパネル
 
 ```
-BaseHeight: 1.6m
-MinHeight: 1.2m
-MaxHeight: 2.2m
-OffsetRatio: 0.8
+ReferenceBox: 低め〜高めまで届く範囲に調整
+OffsetTargets: スイッチ群の親ホルダー / パネル本体
 
-→ 小さいアバターでも大きいアバターでも快適
-```
-
-### 高さ固定だが微調整
-
-```
-BaseHeight: 1.5m
-OffsetRatio: 0.3
-
-→ ほぼ固定だが、極端に小さい・大きいアバターには対応
+→ 小さいアバターでも大きいアバターでも届きやすい
 ```
 
 ## 配置のコツ
 
 ### スイッチの配置
 
-HeightOffsetter の**子オブジェクト**として配置：
+OffsetTargets は「HeightOffsetter の子」に限らず設定できます。
+ただし、運用を簡単にするために、対象をまとめた親（パネルやホルダー）を OffsetTargets に登録するのがおすすめです。
 
 ```
 HeightOffsetter
@@ -110,14 +91,13 @@ HeightOffsetter_設定パネル
 
 ## ベストプラクティス
 
-### 適度な調整範囲
+### 変化を追いすぎない
 
-```
-MinHeight: BaseHeight - 0.4m
-MaxHeight: BaseHeight + 0.6m
+高さ変化が気になる場合は、以下を調整すると落ち着きます。
 
-→ 極端すぎない範囲で調整
-```
+- **Sample Interval Seconds** を長めにする
+- **Height Change Epsilon** を少し大きくする
+- **Move Duration Seconds** を少し長くする
 
 ### わかりやすい表示
 
@@ -131,17 +111,18 @@ HeightOffsetter の近くに説明を配置：
 
 ### 高さが変わらない
 
-- プレイヤーが範囲内にいるか確認
-- OffsetRatio が 0 になっていないか確認
+- ReferenceBox が設定されているか確認
+- OffsetTargets が空になっていないか確認
+- 対象が無効化されていないか確認
 
 ### 高さが極端
 
-- MinHeight / MaxHeight の範囲を確認
-- OffsetRatio を調整
+- ReferenceBox のサイズ/位置（最小/最大Y）が想定通りか確認
+- Move Duration Seconds が短すぎてガクつく場合は少し長くする
 
 ### スイッチが付いてこない
 
-- スイッチが HeightOffsetter の子オブジェクトになっているか確認
+- OffsetTargets に対象（または対象の親）が登録されているか確認
 
 ## 関連ユーティリティ
 

@@ -4,68 +4,54 @@ sidebar_position: 3
 
 # SwitchSyncer
 
-指定した複数のスイッチやスライダーを簡単に連動させることができる便利なユーティリティです。
+複数のスイッチ / スライダー / セレクターを「同じ状態」に揃えるユーティリティです。
 
 ## 特徴
 
-### 🔗 簡単な連動設定
+### 🔗 まとめて同一状態に同期
 
-複雑なスクリプトを書かなくても、複数のスイッチ・スライダーを連動させられます。
+Inspector の配列に追加した対象を、同じ状態（ON/OFF、スライダー値、選択インデックス）に揃えます。
 
-### 🎯 柔軟な制御
+### 🎯 対象ごとに同期
 
-- スイッチ同士の連動
-- スライダー同士の連動
-- スイッチとスライダーの組み合わせ
+- Toggle系スイッチ（ON/OFF）
+- Slider系（0〜1 の値）
+- SwitchSelector系（選択インデックス）
 
 ## 使い方
 
-![SwitchSyncer Inspector](/img/SwitchSyncer_Inspector.jpg)
+<img src={require('@site/static/img/SwitchSyncer_Inspector.jpg').default} alt="SwitchSyncer Inspector" style={{maxWidth: '420px'}} />
 
 ### 基本的な設定
 
 1. `SwitchSyncer.prefab` をシーンに配置
-2. Inspector で連動させたいスイッチ・スライダーを設定
-3. 連動モードを選択
+2. Inspector で同期させたい対象を配列に設定
+  - Toggleモードのスイッチ → **Toggle Switches**
+  - SwitchSelector → **Switch Selectors**
+  - スライダー → **Slider Switches**
+3. 必要に応じて同期間隔や補間時間を調整
 
-### 連動モード
+### どう同期されるか（挙動）
 
-#### マスタースレーブモード
-
-1つのマスターに対して、複数のスレーブが追従します。
-
-```
-Master: Switch_A
-Slaves: Switch_B, Switch_C, Switch_D
-
-→ Switch_A を変更すると、B, C, D も連動
-```
-
-#### 双方向モード
-
-すべてのスイッチが互いに連動します。
-
-```
-Switches: Switch_A, Switch_B, Switch_C
-
-→ どれか1つを変更すると、すべてが連動
-```
+- 一定間隔で対象の状態変化をチェックし、変化が見つかったら **他の全対象に同じ状態を適用**します。
+- 「マスター/スレーブ」や「双方向」の選択はありません。
+  - **どれか1つを操作した値が、その時点の“基準”**になって全体へ反映されます。
+- LocalSave などの「復元値」を持つ対象がある場合、起動直後は **復元値を優先して揃える**挙動があります。
 
 ## 用途例
 
 ### 複数エリアの照明を一括制御
 
 ```
-Master: メインスイッチ
-Slaves: エリア1の照明, エリア2の照明, エリア3の照明
+Toggle Switches: エリア1照明スイッチ, エリア2照明スイッチ, エリア3照明スイッチ
 
-→ メインスイッチで全エリアの照明を一括制御
+→ どれか1つを操作すると、すべて同じON/OFFに揃う
 ```
 
 ### ミラーとライトの連動
 
 ```
-Switches: ミラースイッチ, ライトスイッチ
+Toggle Switches: ミラースイッチ, ライトスイッチ
 
 → ミラーをオンにすると自動的にライトもオン
 ```
@@ -73,8 +59,7 @@ Switches: ミラースイッチ, ライトスイッチ
 ### 音量の一括調整
 
 ```
-Master: マスター音量スライダー
-Slaves: BGM, 環境音, 効果音
+Slider Switches: マスター音量, BGM, 環境音, 効果音
 
 → マスター音量で全体のバランスを保ったまま一括調整
 ```
@@ -83,61 +68,47 @@ Slaves: BGM, 環境音, 効果音
 
 | パラメータ | 説明 |
 |----------|------|
-| SyncMode | マスタースレーブ / 双方向 |
-| MasterSwitch | マスターとなるスイッチ（マスタースレーブモードのみ） |
-| SlavesSwitches | 連動させるスイッチの配列 |
-| SyncDelay | 連動までの遅延時間（秒） |
+| Toggle Switches | 同じON/OFFに揃えたい Toggleモードのスイッチ配列 |
+| Switch Selectors | 同じ選択インデックスに揃えたい SwitchSelector 配列 |
+| Slider Switches | 同じ値(0〜1)に揃えたいスライダー配列 |
+| Sync Interval Seconds | 状態チェック間隔（秒）。軽量化のため毎フレームはチェックしません |
+| Slider Sync Interpolation Time | スライダーを外部同期する時の補間時間（秒） |
 
 ## ベストプラクティス
 
-### 階層的な制御
+### 同じ「意味」のものをまとめる
 
-```
-レベル1: 総合スイッチ
-  └─ レベル2: エリアごとのスイッチ
-      └─ レベル3: 個別のスイッチ
-```
+同一の同期グループには、同じ目的・同じ挙動のものを入れるのがおすすめです。
 
-### わかりやすい命名
-
-連動しているスイッチは名前でわかるようにしましょう：
-
-```
-Master_AllLights
-├── Slave_Area1_Lights
-├── Slave_Area2_Lights
-└── Slave_Area3_Lights
-```
+例：同じエリアの照明スイッチ群、同じ種類の音量スライダー群 など。
 
 ## 注意事項
 
 :::warning
-**無限ループに注意**
+**同期グループの重複に注意**
 
-SwitchSyncer を複数使う場合、連動のループが発生しないように設計してください。
+同じ対象を複数の SwitchSyncer に同時に入れると、意図しない上書きや揺れ（同期の競合）が起きることがあります。
 
-例：
-- A → B を連動
-- B → A を連動
-→ 無限ループ！
+基本は「1つの対象は、1つの SwitchSyncer グループに所属」として設計してください。
 :::
 
 ## トラブルシューティング
 
 ### 連動しない
 
-- ターゲットの設定を確認
-- SyncMode を確認
-- スイッチが正しく動作しているか確認
+- 対象が配列（Toggle Switches / Slider Switches / Switch Selectors）に設定されているか確認
+- 対象側が正しく動作しているか（単体でON/OFFや値変更ができるか）確認
+- 反映に時間がかかる場合は **Sync Interval Seconds** を短くする（負荷とのトレードオフ）
 
 ### 遅延が気になる
 
-- SyncDelay を調整
-- 0 にすると即座に連動
+- チェック間隔が原因の場合：**Sync Interval Seconds** を調整
+- スライダーの追従がゆっくりに見える場合：**Slider Sync Interpolation Time** を調整
 
 ### 一部だけ連動しない
 
-- Slaves の配列にすべて追加されているか確認
+- 対象の参照が切れていないか（Missing になっていないか）確認
+- 同期させたい対象が別の SwitchSyncer にも入っていないか確認
 
 ## 関連コンポーネント
 
