@@ -47,23 +47,23 @@ LuraSwitch2 は、VRChat ワールド内で様々な要素を簡単に制御で�
 
 ## スイッチの種類
 
-LuraSwitch2 には以下のようなスイッチが用意されています：
+LuraSwitch2 には以下のようなスイッチが用意されています:
 
-### オブジェクト切り替えスイッチ
+### スイッチ:Toggleモード
 
-カラー分類で機能を識別できます：
+カラー分類で機能を識別できます:
 
-- **White**: Mirror（ミラー）
-- **Orange**: Object（オブジェクト）、Pen（ペン）、Key（キー）
-- **Pink**: Audio（オーディオ）、Video（ビデオ）、Music（音楽）
-- **Blue**: Chair（椅子）、LiteMode（軽量モード）
-- **Green**: Bed（ベッド）、Collider（コライダー）
-- **Purple**: PostEffect（ポストエフェクト）、Night（昼夜）、Effect（エフェクト）
-- **Warm**: AvatarLight（アバターライト）、Light（ライト）
+- **White**: Mirror(ミラー)
+- **Orange**: Object(オブジェクト)、Pen(ペン)、Key(キー)
+- **Pink**: Audio(オーディオ)、Video(ビデオ)、Music(音楽)
+- **Blue**: Chair(椅子)、LiteMode(軽量モード)
+- **Green**: Bed(ベッド)、Collider(コライダー)
+- **Purple**: PostEffect(ポストエフェクト)、Night(昼夜)、Effect(エフェクト)
+- **Warm**: AvatarLight(アバターライト)、Light(ライト)
 
-### 外部スクリプト呼び出しスイッチ
+### スイッチ:Externalモード
 
-- **Light Green**: Teleport（テレポート）、Reset（リセット）
+- **Light Green**: Teleport(テレポート)、Reset(リセット)
 
 ## 🚀 はじめに
 

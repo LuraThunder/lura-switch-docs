@@ -2,7 +2,9 @@
 sidebar_position: 3
 ---
 
-# 外部スクリプト呼び出しスイッチ
+# スイッチ:Externalモード
+
+**外部スクリプト呼び出しスイッチ**
 
 外部Udonスクリプトの機能を呼び出すスイッチの一覧です。
 
@@ -12,11 +14,11 @@ sidebar_position: 3
 
 <div style={{display: 'flex', gap: '20px', marginBottom: '20px'}}>
   <div>
-    <img src={require('@site/static/img/Switch_Teleport_3D.png').default} alt="Switch_Teleport 3D" style={{backgroundColor: '#000'}} />
+    <img src={require('@site/static/img/Switch_Teleport_3D.png').default} alt="Switch_Teleport 3D" style={{maxWidth: '200px', backgroundColor: '#000'}} />
     <p style={{textAlign: 'center'}}>3Dモード</p>
   </div>
   <div>
-    <img src={require('@site/static/img/Switch_Teleport_2D.png').default} alt="Switch_Teleport 2D" style={{backgroundColor: '#000'}} />
+    <img src={require('@site/static/img/Switch_Teleport_2D.png').default} alt="Switch_Teleport 2D" style={{maxWidth: '200px', backgroundColor: '#000'}} />
     <p style={{textAlign: 'center'}}>2Dモード</p>
   </div>
 </div>
@@ -55,11 +57,11 @@ sidebar_position: 3
 
 <div style={{display: 'flex', gap: '20px', marginBottom: '20px'}}>
   <div>
-    <img src={require('@site/static/img/Switch_Reset_3D.png').default} alt="Switch_Reset 3D" style={{backgroundColor: '#000'}} />
+    <img src={require('@site/static/img/Switch_Reset_3D.png').default} alt="Switch_Reset 3D" style={{maxWidth: '200px', backgroundColor: '#000'}} />
     <p style={{textAlign: 'center'}}>3Dモード</p>
   </div>
   <div>
-    <img src={require('@site/static/img/Switch_Reset_2D.png').default} alt="Switch_Reset 2D" style={{backgroundColor: '#000'}} />
+    <img src={require('@site/static/img/Switch_Reset_2D.png').default} alt="Switch_Reset 2D" style={{maxWidth: '200px', backgroundColor: '#000'}} />
     <p style={{textAlign: 'center'}}>2Dモード</p>
   </div>
 </div>
@@ -96,7 +98,7 @@ Fukuro UdonのManualObjectSyncを使用している場合も、このスイッ�
 
 ## カスタム外部スクリプト
 
-独自の外部スクリプト呼び出しスイッチを作成することも可能です。
+独自のスイッチ:Externalモードを作成することも可能です。
 
 ### 作成方法
 
@@ -110,7 +112,7 @@ Fukuro UdonのManualObjectSyncを使用している場合も、このスイッ�
 
 ## 共通の使い方
 
-外部スクリプト呼び出しスイッチも、基本的な操作は通常のスイッチと同じです。
+スイッチ:Externalモードも、基本的な操作は通常のスイッチと同じです。
 
 - **SwitchVisualMode**: 3D/2D切り替え
 - **SwitchText**: 表示テキスト設定
@@ -118,6 +120,6 @@ Fukuro UdonのManualObjectSyncを使用している場合も、このスイッ�
 
 ## 次のステップ
 
-- [オブジェクト切り替えスイッチ](./object-switches.md)
+- [スイッチ:Toggleモード](./object-switches.md)
 - [スライダー](../sliders/overview.md)
 - [カスタマイズガイド](../advanced/customization.md)

@@ -2,7 +2,9 @@
 sidebar_position: 2
 ---
 
-# オブジェクト切り替えスイッチ
+# スイッチ:Toggleモード
+
+**オブジェクト切り替えスイッチ**
 
 ターゲットオブジェクトのアクティブ状態を切り替えるスイッチの一覧です。
 
@@ -12,11 +14,11 @@ sidebar_position: 2
 
 <div style={{display: 'flex', gap: '20px', marginBottom: '20px'}}>
   <div>
-    <img src={require('@site/static/img/Switch_Mirror_3D.png').default} alt="Switch_Mirror 3D" style={{backgroundColor: '#000'}} />
+    <img src={require('@site/static/img/Switch_Mirror_3D.png').default} alt="Switch_Mirror 3D" style={{maxWidth: '200px', backgroundColor: '#000'}} />
     <p style={{textAlign: 'center'}}>3Dモード</p>
   </div>
   <div>
-    <img src={require('@site/static/img/Switch_Mirror_2D.png').default} alt="Switch_Mirror 2D" style={{backgroundColor: '#000'}} />
+    <img src={require('@site/static/img/Switch_Mirror_2D.png').default} alt="Switch_Mirror 2D" style={{maxWidth: '200px', backgroundColor: '#000'}} />
     <p style={{textAlign: 'center'}}>2Dモード</p>
   </div>
 </div>
@@ -35,11 +37,11 @@ sidebar_position: 2
 
 <div style={{display: 'flex', gap: '20px', marginBottom: '20px'}}>
   <div>
-    <img src={require('@site/static/img/Switch_Object_3D.png').default} alt="Switch_Object 3D" style={{backgroundColor: '#000'}} />
+    <img src={require('@site/static/img/Switch_Object_3D.png').default} alt="Switch_Object 3D" style={{maxWidth: '200px', backgroundColor: '#000'}} />
     <p style={{textAlign: 'center'}}>3Dモード</p>
   </div>
   <div>
-    <img src={require('@site/static/img/Switch_Object_2D.png').default} alt="Switch_Object 2D" style={{backgroundColor: '#000'}} />
+    <img src={require('@site/static/img/Switch_Object_2D.png').default} alt="Switch_Object 2D" style={{maxWidth: '200px', backgroundColor: '#000'}} />
     <p style={{textAlign: 'center'}}>2Dモード</p>
   </div>
 </div>
@@ -59,11 +61,11 @@ sidebar_position: 2
 
 <div style={{display: 'flex', gap: '20px', marginBottom: '20px'}}>
   <div>
-    <img src={require('@site/static/img/Switch_Pen_3D.png').default} alt="Switch_Pen 3D" style={{backgroundColor: '#000'}} />
+    <img src={require('@site/static/img/Switch_Pen_3D.png').default} alt="Switch_Pen 3D" style={{maxWidth: '200px', backgroundColor: '#000'}} />
     <p style={{textAlign: 'center'}}>3Dモード</p>
   </div>
   <div>
-    <img src={require('@site/static/img/Switch_Pen_2D.png').default} alt="Switch_Pen 2D" style={{backgroundColor: '#000'}} />
+    <img src={require('@site/static/img/Switch_Pen_2D.png').default} alt="Switch_Pen 2D" style={{maxWidth: '200px', backgroundColor: '#000'}} />
     <p style={{textAlign: 'center'}}>2Dモード</p>
   </div>
 </div>
@@ -76,11 +78,11 @@ sidebar_position: 2
 
 <div style={{display: 'flex', gap: '20px', marginBottom: '20px'}}>
   <div>
-    <img src={require('@site/static/img/Switch_Key_3D.png').default} alt="Switch_Key 3D" style={{backgroundColor: '#000'}} />
+    <img src={require('@site/static/img/Switch_Key_3D.png').default} alt="Switch_Key 3D" style={{maxWidth: '200px', backgroundColor: '#000'}} />
     <p style={{textAlign: 'center'}}>3Dモード</p>
   </div>
   <div>
-    <img src={require('@site/static/img/Switch_Key_2D.png').default} alt="Switch_Key 2D" style={{backgroundColor: '#000'}} />
+    <img src={require('@site/static/img/Switch_Key_2D.png').default} alt="Switch_Key 2D" style={{maxWidth: '200px', backgroundColor: '#000'}} />
     <p style={{textAlign: 'center'}}>2Dモード</p>
   </div>
 </div>
@@ -97,11 +99,11 @@ sidebar_position: 2
 
 <div style={{display: 'flex', gap: '20px', marginBottom: '20px'}}>
   <div>
-    <img src={require('@site/static/img/Switch_Audio_3D.png').default} alt="Switch_Audio 3D" style={{backgroundColor: '#000'}} />
+    <img src={require('@site/static/img/Switch_Audio_3D.png').default} alt="Switch_Audio 3D" style={{maxWidth: '200px', backgroundColor: '#000'}} />
     <p style={{textAlign: 'center'}}>3Dモード</p>
   </div>
   <div>
-    <img src={require('@site/static/img/Switch_Audio_2D.png').default} alt="Switch_Audio 2D" style={{backgroundColor: '#000'}} />
+    <img src={require('@site/static/img/Switch_Audio_2D.png').default} alt="Switch_Audio 2D" style={{maxWidth: '200px', backgroundColor: '#000'}} />
     <p style={{textAlign: 'center'}}>2Dモード</p>
   </div>
 </div>
@@ -123,11 +125,11 @@ Audio Sourceの再生/停止を制御します。
 
 <div style={{display: 'flex', gap: '20px', marginBottom: '20px'}}>
   <div>
-    <img src={require('@site/static/img/Switch_Video_3D.png').default} alt="Switch_Video 3D" style={{backgroundColor: '#000'}} />
+    <img src={require('@site/static/img/Switch_Video_3D.png').default} alt="Switch_Video 3D" style={{maxWidth: '200px', backgroundColor: '#000'}} />
     <p style={{textAlign: 'center'}}>3Dモード</p>
   </div>
   <div>
-    <img src={require('@site/static/img/Switch_Video_2D.png').default} alt="Switch_Video 2D" style={{backgroundColor: '#000'}} />
+    <img src={require('@site/static/img/Switch_Video_2D.png').default} alt="Switch_Video 2D" style={{maxWidth: '200px', backgroundColor: '#000'}} />
     <p style={{textAlign: 'center'}}>2Dモード</p>
   </div>
 </div>
@@ -143,11 +145,11 @@ Video Playerの再生/停止を制御します。
 
 <div style={{display: 'flex', gap: '20px', marginBottom: '20px'}}>
   <div>
-    <img src={require('@site/static/img/Switch_Music_3D.png').default} alt="Switch_Music 3D" style={{backgroundColor: '#000'}} />
+    <img src={require('@site/static/img/Switch_Music_3D.png').default} alt="Switch_Music 3D" style={{maxWidth: '200px', backgroundColor: '#000'}} />
     <p style={{textAlign: 'center'}}>3Dモード</p>
   </div>
   <div>
-    <img src={require('@site/static/img/Switch_Music_2D.png').default} alt="Switch_Music 2D" style={{backgroundColor: '#000'}} />
+    <img src={require('@site/static/img/Switch_Music_2D.png').default} alt="Switch_Music 2D" style={{maxWidth: '200px', backgroundColor: '#000'}} />
     <p style={{textAlign: 'center'}}>2Dモード</p>
   </div>
 </div>
@@ -164,11 +166,11 @@ Video Playerの再生/停止を制御します。
 
 <div style={{display: 'flex', gap: '20px', marginBottom: '20px'}}>
   <div>
-    <img src={require('@site/static/img/Switch_Chair_3D.png').default} alt="Switch_Chair 3D" style={{backgroundColor: '#000'}} />
+    <img src={require('@site/static/img/Switch_Chair_3D.png').default} alt="Switch_Chair 3D" style={{maxWidth: '200px', backgroundColor: '#000'}} />
     <p style={{textAlign: 'center'}}>3Dモード</p>
   </div>
   <div>
-    <img src={require('@site/static/img/Switch_Chair_2D.png').default} alt="Switch_Chair 2D" style={{backgroundColor: '#000'}} />
+    <img src={require('@site/static/img/Switch_Chair_2D.png').default} alt="Switch_Chair 2D" style={{maxWidth: '200px', backgroundColor: '#000'}} />
     <p style={{textAlign: 'center'}}>2Dモード</p>
   </div>
 </div>
@@ -183,11 +185,11 @@ Video Playerの再生/停止を制御します。
 
 <div style={{display: 'flex', gap: '20px', marginBottom: '20px'}}>
   <div>
-    <img src={require('@site/static/img/Switch_LiteMode_3D.png').default} alt="Switch_LiteMode 3D" style={{backgroundColor: '#000'}} />
+    <img src={require('@site/static/img/Switch_LiteMode_3D.png').default} alt="Switch_LiteMode 3D" style={{maxWidth: '200px', backgroundColor: '#000'}} />
     <p style={{textAlign: 'center'}}>3Dモード</p>
   </div>
   <div>
-    <img src={require('@site/static/img/Switch_LiteMode_2D.png').default} alt="Switch_LiteMode 2D" style={{backgroundColor: '#000'}} />
+    <img src={require('@site/static/img/Switch_LiteMode_2D.png').default} alt="Switch_LiteMode 2D" style={{maxWidth: '200px', backgroundColor: '#000'}} />
     <p style={{textAlign: 'center'}}>2Dモード</p>
   </div>
 </div>
@@ -212,11 +214,11 @@ VR専用機能の切り替えを行います。
 
 <div style={{display: 'flex', gap: '20px', marginBottom: '20px'}}>
   <div>
-    <img src={require('@site/static/img/Switch_Bed_3D.png').default} alt="Switch_Bed 3D" style={{backgroundColor: '#000'}} />
+    <img src={require('@site/static/img/Switch_Bed_3D.png').default} alt="Switch_Bed 3D" style={{maxWidth: '200px', backgroundColor: '#000'}} />
     <p style={{textAlign: 'center'}}>3Dモード</p>
   </div>
   <div>
-    <img src={require('@site/static/img/Switch_Bed_2D.png').default} alt="Switch_Bed 2D" style={{backgroundColor: '#000'}} />
+    <img src={require('@site/static/img/Switch_Bed_2D.png').default} alt="Switch_Bed 2D" style={{maxWidth: '200px', backgroundColor: '#000'}} />
     <p style={{textAlign: 'center'}}>2Dモード</p>
   </div>
 </div>
@@ -229,11 +231,11 @@ VR専用機能の切り替えを行います。
 
 <div style={{display: 'flex', gap: '20px', marginBottom: '20px'}}>
   <div>
-    <img src={require('@site/static/img/Switch_Collider_3D.png').default} alt="Switch_Collider 3D" style={{backgroundColor: '#000'}} />
+    <img src={require('@site/static/img/Switch_Collider_3D.png').default} alt="Switch_Collider 3D" style={{maxWidth: '200px', backgroundColor: '#000'}} />
     <p style={{textAlign: 'center'}}>3Dモード</p>
   </div>
   <div>
-    <img src={require('@site/static/img/Switch_Collider_2D.png').default} alt="Switch_Collider 2D" style={{backgroundColor: '#000'}} />
+    <img src={require('@site/static/img/Switch_Collider_2D.png').default} alt="Switch_Collider 2D" style={{maxWidth: '200px', backgroundColor: '#000'}} />
     <p style={{textAlign: 'center'}}>2Dモード</p>
   </div>
 </div>
@@ -255,11 +257,11 @@ Colliderの有効/無効を切り替えます。
 
 <div style={{display: 'flex', gap: '20px', marginBottom: '20px'}}>
   <div>
-    <img src={require('@site/static/img/Switch_PostEffect_3D.png').default} alt="Switch_PostEffect 3D" style={{backgroundColor: '#000'}} />
+    <img src={require('@site/static/img/Switch_PostEffect_3D.png').default} alt="Switch_PostEffect 3D" style={{maxWidth: '200px', backgroundColor: '#000'}} />
     <p style={{textAlign: 'center'}}>3Dモード</p>
   </div>
   <div>
-    <img src={require('@site/static/img/Switch_PostEffect_2D.png').default} alt="Switch_PostEffect 2D" style={{backgroundColor: '#000'}} />
+    <img src={require('@site/static/img/Switch_PostEffect_2D.png').default} alt="Switch_PostEffect 2D" style={{maxWidth: '200px', backgroundColor: '#000'}} />
     <p style={{textAlign: 'center'}}>2Dモード</p>
   </div>
 </div>
@@ -274,11 +276,11 @@ Colliderの有効/無効を切り替えます。
 
 <div style={{display: 'flex', gap: '20px', marginBottom: '20px'}}>
   <div>
-    <img src={require('@site/static/img/Switch_Night_3D.png').default} alt="Switch_Night 3D" style={{backgroundColor: '#000'}} />
+    <img src={require('@site/static/img/Switch_Night_3D.png').default} alt="Switch_Night 3D" style={{maxWidth: '200px', backgroundColor: '#000'}} />
     <p style={{textAlign: 'center'}}>3Dモード</p>
   </div>
   <div>
-    <img src={require('@site/static/img/Switch_Night_2D.png').default} alt="Switch_Night 2D" style={{backgroundColor: '#000'}} />
+    <img src={require('@site/static/img/Switch_Night_2D.png').default} alt="Switch_Night 2D" style={{maxWidth: '200px', backgroundColor: '#000'}} />
     <p style={{textAlign: 'center'}}>2Dモード</p>
   </div>
 </div>
@@ -293,11 +295,11 @@ Colliderの有効/無効を切り替えます。
 
 <div style={{display: 'flex', gap: '20px', marginBottom: '20px'}}>
   <div>
-    <img src={require('@site/static/img/Switch_Effect_3D.png').default} alt="Switch_Effect 3D" style={{backgroundColor: '#000'}} />
+    <img src={require('@site/static/img/Switch_Effect_3D.png').default} alt="Switch_Effect 3D" style={{maxWidth: '200px', backgroundColor: '#000'}} />
     <p style={{textAlign: 'center'}}>3Dモード</p>
   </div>
   <div>
-    <img src={require('@site/static/img/Switch_Effect_2D.png').default} alt="Switch_Effect 2D" style={{backgroundColor: '#000'}} />
+    <img src={require('@site/static/img/Switch_Effect_2D.png').default} alt="Switch_Effect 2D" style={{maxWidth: '200px', backgroundColor: '#000'}} />
     <p style={{textAlign: 'center'}}>2Dモード</p>
   </div>
 </div>
@@ -316,11 +318,11 @@ Colliderの有効/無効を切り替えます。
 
 <div style={{display: 'flex', gap: '20px', marginBottom: '20px'}}>
   <div>
-    <img src={require('@site/static/img/Switch_AvatarLight_3D.png').default} alt="Switch_AvatarLight 3D" style={{backgroundColor: '#000'}} />
+    <img src={require('@site/static/img/Switch_AvatarLight_3D.png').default} alt="Switch_AvatarLight 3D" style={{maxWidth: '200px', backgroundColor: '#000'}} />
     <p style={{textAlign: 'center'}}>3Dモード</p>
   </div>
   <div>
-    <img src={require('@site/static/img/Switch_AvatarLight_2D.png').default} alt="Switch_AvatarLight 2D" style={{backgroundColor: '#000'}} />
+    <img src={require('@site/static/img/Switch_AvatarLight_2D.png').default} alt="Switch_AvatarLight 2D" style={{maxWidth: '200px', backgroundColor: '#000'}} />
     <p style={{textAlign: 'center'}}>2Dモード</p>
   </div>
 </div>
@@ -335,11 +337,11 @@ Colliderの有効/無効を切り替えます。
 
 <div style={{display: 'flex', gap: '20px', marginBottom: '20px'}}>
   <div>
-    <img src={require('@site/static/img/Switch_Light_3D.png').default} alt="Switch_Light 3D" style={{backgroundColor: '#000'}} />
+    <img src={require('@site/static/img/Switch_Light_3D.png').default} alt="Switch_Light 3D" style={{maxWidth: '200px', backgroundColor: '#000'}} />
     <p style={{textAlign: 'center'}}>3Dモード</p>
   </div>
   <div>
-    <img src={require('@site/static/img/Switch_Light_2D.png').default} alt="Switch_Light 2D" style={{backgroundColor: '#000'}} />
+    <img src={require('@site/static/img/Switch_Light_2D.png').default} alt="Switch_Light 2D" style={{maxWidth: '200px', backgroundColor: '#000'}} />
     <p style={{textAlign: 'center'}}>2Dモード</p>
   </div>
 </div>
@@ -365,6 +367,6 @@ Colliderの有効/無効を切り替えます。
 
 ## 次のステップ
 
-- [外部スクリプト呼び出しスイッチ](./function-switches.md)
+- [スイッチ:Externalモード](./function-switches.md)
 - [スライダー](../sliders/overview.md)
 - [モードスイッチ](../mode-switch/overview.md)
