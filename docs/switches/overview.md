@@ -48,18 +48,18 @@ LuraSwitch2 のスイッチには、2つの動作モードがあります。
 
 ## スイッチのカラー分類
 
-スイッチは機能別にカラー分類されています：
+LuraSwitch2 ではカラー分類を以下のように再定義しました（絵文字つき）。
 
-| カラー | 対象スイッチ |
-|--------|------------|
-| **White** | Mirror（ミラー） |
-| **Orange** | Object（オブジェクト）、Pen（ペン）、Key（キー） |
-| **Pink** | Audio（オーディオ）、Video（ビデオ）、Music（音楽） |
-| **Blue** | Chair（椅子）、LiteMode（軽量モード）、VROnly（VR専用） |
-| **Green** | Bed（ベッド）、Collider（コライダー） |
-| **Purple** | PostEffect（ポストエフェクト）、Night（昼夜）、Effect（エフェクト） |
-| **Warm** | AvatarLight（アバターライト）、Light（ライト） |
-| **Light Green** | Teleport（テレポート）、Reset（リセット） |
+| カラー (絵文字) | 説明 |
+|---|---|
+| **White 🪞** | ミラーの切り替え（Mirror） |
+| **Orange 📦** | オブジェクト等の切り替え（Object、Pen、Key など） |
+| **Pink 🎵** | メディアの切り替え（Audio、Video、Music など） |
+| **Blue ⚙️** | 機能の切り替え（外部スクリプト呼び出しなど） |
+| **Green 🟢** | コライダーの切り替え（Collider） |
+| **Purple 🎨** | 見た目の切り替え（PostEffect、Effect など） |
+| **Warm 💡** | ライトの切り替え（AvatarLight、Light など） |
+| **LightGreen ⚡** | 機能の発動（Teleport、Reset 等の即時発動系） |
 
 ## 共通パラメータ
 

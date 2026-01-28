@@ -64,7 +64,7 @@ const config = {
     /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
     ({
       // Replace with your project's social card
-      image: 'img/docusaurus-social-card.jpg',
+      image: 'img/LuraSwitch2-social-card.png',
       colorMode: {
         respectPrefersColorScheme: true,
       },
@@ -104,8 +104,8 @@ const config = {
             title: 'コミュニティ',
             items: [
               {
-                label: 'X (Twitter)',
-                href: 'https://x.com/LuraThunder',
+                label: 'X',
+                href: 'https://x.com/Lu_Ra_999',
               },
               {
                 label: 'GitHub',
@@ -116,10 +116,13 @@ const config = {
           {
             title: 'その他',
             items: [
-              
               {
-                label: 'BOOTH',
-                href: 'https://lurathunder.booth.pm/',
+                label: 'BOOTH 商品ページ',
+                href: 'https://lura.booth.pm/items/7923735',
+              },
+              {
+                label: 'BOOTH ショップ',
+                href: 'https://lura.booth.pm/',
               },
             ],
           },
