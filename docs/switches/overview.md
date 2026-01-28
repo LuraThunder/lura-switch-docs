@@ -2,13 +2,21 @@
 sidebar_position: 1
 ---
 
-# スイッチ概要
+# 🏷️スイッチ概要
+
+<div style={{display: 'flex', gap: '20px', marginBottom: '20px'}}>
+  <div>
+    <img src={require('@site/static/img/LuraSwitch2-social-card.png').default} alt="Switch 3D"  />
+  </div>
+</div>
 
 LuraSwitch2 のスイッチシステムについて説明します。
 
-## スイッチとは
+## LuraSwitchとは
 
-スイッチは、オン/オフの2状態を切り替えるコンポーネントです。ライトの点灯/消灯、オブジェクトの表示/非表示など、様々な要素を制御できます。
+LuraSwitch2は、VRChatで長く使われていたスイッチの新バージョンです。  
+シンプルで使いやすく、様々な動作を可能にします。
+
 
 ## スイッチの2つのモード
 
@@ -16,7 +24,18 @@ LuraSwitch2 のスイッチには、2つの動作モードがあります。
 
 ### 1. スイッチ：Toggleモード（デフォルト）
 
-**オブジェクト切り替えスイッチ**
+<div style={{display: 'flex', gap: '20px', marginBottom: '20px'}}>
+  <div>
+    <img src={require('@site/static/img/Switch_Object_3D.png').default} alt="Switch Toggle 3D" style={{maxWidth: '200px', backgroundColor: '#000'}} />
+    <p style={{textAlign: 'center'}}>非アクティブ状態</p>
+  </div>
+  <div>
+    <img src={require('@site/static/img/Switch_Object_3D_Active.png').default} alt="Switch Toggle 2D" style={{maxWidth: '200px', backgroundColor: '#000'}} />
+    <p style={{textAlign: 'center'}}>アクティブ状態</p>
+  </div>
+</div>
+
+**オブジェクトの切り替えスイッチです**
 
 ターゲットオブジェクトのアクティブ状態を切り替えます。
 
@@ -29,9 +48,16 @@ LuraSwitch2 のスイッチには、2つの動作モードがあります。
 
 ### 2. スイッチ：Externalモード
 
+<div style={{display: 'flex', gap: '20px', marginBottom: '20px'}}>
+  <div>
+    <img src={require('@site/static/img/Switch_Teleport_3D.png').default} alt="Switch External 3D" style={{maxWidth: '200px', backgroundColor: '#000'}} />
+    <p style={{textAlign: 'center'}}>テレポートスイッチ</p>
+  </div>
+</div>
+
 **外部スクリプト呼び出しスイッチ**
 
-外部のUdonスクリプトの機能を呼び出します。
+Externalモードでは、外部のUdonスクリプトの機能を呼び出します。
 
 現在デフォルトで以下が用意されています。
 
@@ -40,7 +66,7 @@ LuraSwitch2 のスイッチには、2つの動作モードがあります。
 
 ## ビジュアルモード
 
-すべてのスイッチは **2Dモード** と **3Dモード** を切り替えられます。
+すべてのスイッチは **SwitchVisualMode** パラメータを切り替えることで、 **3Dモード** と **2Dモード** を切り替えられます。
 
 <div style={{display: 'flex', gap: '20px', marginBottom: '20px', alignItems: 'center'}}>
   <div>
@@ -53,22 +79,25 @@ LuraSwitch2 のスイッチには、2つの動作モードがあります。
   </div>
 </div>
 
-**SwitchVisualMode** パラメータを切り替えることで、見た目を瞬時に変更できます。
+:::tip
+多くの人が旧LuraSwitchでも2Dで使用していたため公式で採用しました。  
+3Dで配置した後にデザイン調整をするということも可能です。
+:::
 
 ## スイッチのカラー分類
 
 LuraSwitch2 ではカラー分類を以下のように再定義しました（絵文字つき）。
 
-| カラー (絵文字) | 機能 | 説明 |
-|---|---|---|
-| **White 🪞** | ミラーの切り替え | Mirror（ミラー）の表示/非表示を制御 |
-| **Orange 📦** | オブジェクトの切り替え | Object、Pen、Key などのゲームオブジェクトの表示/非表示を制御 |
-| **Pink 🎵** | メディアの切り替え | Audio、Video、Music などのメディア再生を制御 |
-| **Blue ⚙️** | 機能の切り替え | Chair、LiteModeなどの特定機能のオン/オフを制御 |
-| **Green 🟢** | コライダーの切り替え | Bed、Colliderなどの物理コライダーのオン/オフを制御 |
-| **Purple 🎨** | 見た目の切り替え | PostEffect、Night、Effectなどの視覚効果を制御 |
-| **Warm 💡** | ライトの切り替え | AvatarLight、Lightなどの照明のオン/オフを制御 |
-| **LightGreen ⚡** | 機能の即時発動 | Teleport、Reset等の外部スクリプトを即座に実行 |
+| カラー (絵文字)  | 機能                   | 説明                                                         |
+| ---------------- | ---------------------- | ------------------------------------------------------------ |
+| **White ⚪**      | ミラーの切り替え       | Mirror（ミラー）の表示/非表示を制御                          |
+| **Orange 🟠**     | オブジェクトの切り替え | Object、Pen、Key などのゲームオブジェクトの表示/非表示を制御 |
+| **Pink 🔴**       | メディアの切り替え     | Audio、Video、Music などのメディア再生を制御                 |
+| **Blue 🔵**       | 機能の切り替え         | Chair、LiteModeなどの特定機能のオン/オフを制御               |
+| **Green 🟢**      | コライダーの切り替え   | Bed、Colliderなどの物理コライダーのオン/オフを制御           |
+| **Purple 🟣**     | 見た目の切り替え       | PostEffect、Night、Effectなどの視覚効果を制御                |
+| **Warm 🟡**       | ライトの切り替え       | AvatarLight、Lightなどの照明のオン/オフを制御                |
+| **LightGreen 🟩** | 機能の即時発動         | Teleport、Reset等の外部スクリプトを即座に実行                |
 
 ## 共通パラメータ
 

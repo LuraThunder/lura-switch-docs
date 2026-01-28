@@ -8,9 +8,10 @@ LuraSwitch2 を最速で導入するための実践的なガイドです。基�
 
 ---
 
-## 1️⃣ まずは「ミラーセット」を配置しよう 🪞
+## 1️⃣ まずは「ミラーセット」を配置しよう
 
-LuraSwitch2 の機能が一通り揃った **LuraMirror_SwitchSet[SAMPLE]** プレハブを配置することから始めます。
+手軽に始めるためにはLuraSwitch2 の機能が一通り揃った
+ `*LuraMirror_SwitchSet[SAMPLE]` プレハブを配置することから始めましょう。
 
 ### プレハブの配置
 
@@ -22,14 +23,23 @@ LuraSwitch2 の機能が一通り揃った **LuraMirror_SwitchSet[SAMPLE]** プ�
 
 ミラーセットには以下の重要なコンポーネントが含まれています。
 
-#### ステップ 1: 鏡の配置を調整する
+  - **LuraMirror（ミラー本体）**  
+  - **Switch（ミラースイッチ）**
+  - **Slider（スライダー）**
+  - **ModeSwitch（HQ／LQ 切り替えスイッチ）**
+  - **SwitchSyncer（スイッチ連動用Prefab）**
+  - **SwitchBoard（2Dスイッチを配置可能なボード）**
+
+### ステップ 1: 鏡の配置を調整する
 
 ![LuraMirror調整 1-1](../static/img/LuraMirror_1-1.jpg)
 ![LuraMirror調整 1-2](../static/img/LuraMirror_1-2.jpg)
 
 ヒエラルキー内の `ReferenceMirror` オブジェクトを選択し、Position・Rotation・Scale を調整して、鏡を好みの位置・サイズに配置してください。
 
-#### ステップ 2: エリアの設定を行う
+
+
+### ステップ 2: エリアの設定を行う
 
 ![Mirror Area](../static/img/Mirror_Area.png)
 
@@ -55,13 +65,13 @@ LuraSwitch2 の機能が一通り揃った **LuraMirror_SwitchSet[SAMPLE]** プ�
 
 ---
 
-## 2️⃣ スイッチを使いこなそう 🎛️
+## 2️⃣ スイッチを使いこなそう
 
 ### ミラーセットに含まれるスイッチ
 
 <img src={require('@site/static/img/Switch_Mirror_3D.png').default} alt="Switch Mirror 3D" style={{maxWidth: '300px', height: 'auto', display: 'block', margin: '20px 0'}} />
 
-ミラーセットには `Switch_Mirror` が含まれています。これは鏡のオン・オフを切り替えるための専用スイッチです。
+ミラーセットには `Switch_Mirror` が含まれています。これは鏡のオン・オフを切り替えるための専用スイッチです。  
 
 ### スイッチの基本
 
@@ -80,6 +90,10 @@ LuraSwitch2 の機能が一通り揃った **LuraMirror_SwitchSet[SAMPLE]** プ�
 旧版は Toggle 方式でしたが、**LuraSwitch2 では On 状態と Off 状態を明確に区別**します。これにより、より直感的で予測可能な動作を実現しています。
 :::
 
+:::tip 💡 ミラーセットPrefab
+ミラーセットに含まれているスイッチには既にミラーを起動するためのActivatorがターゲットが設定されているため変更する必要はありません。
+:::
+
 ### 同期モード (SyncMode)
 
 ![Switch SyncMode Inspector](../static/img/Switch_SyncMode_Inspector.jpg)
@@ -95,7 +109,8 @@ LuraSwitch2 の機能が一通り揃った **LuraMirror_SwitchSet[SAMPLE]** プ�
 `ToggleDefaultOn` を切り替えることで、スイッチの初期状態（オン・オフ）を設定できます。
 
 :::tip 💡 エディタプレビュー
-この設定を変更すると、**Unity エディタ上でも即座にスイッチの見た目が変化**します。Play モードに入らなくても、視覚的に状態を確認できます。
+この設定を変更すると、**Unity エディタ上でも即座にスイッチと、設定したオブジェクトの見た目が変化**します。  
+Play モードに入らなくても、視覚的に状態を確認できます。
 :::
 
 ### 多様なスイッチバリエーション
@@ -165,17 +180,17 @@ LuraSwitch2 では、用途に応じて多彩なデザインのスイッチを�
   </div>
 </div>
 
-スイッチの詳細な機能やカラー分類については、[スイッチ概要ページ](./switches/overview.md) をご覧ください。
+スイッチの詳細な機能については、[スイッチ概要ページ](./switches/overview.md) をご覧ください。
 
 ---
 
-## 3️⃣ スライダーで数値を調整しよう 🎚️
+## 3️⃣ スライダーでミラー透明度をコントロールしよう
 
 ### ミラーセットに含まれるスライダー
 
 <img src={require('@site/static/img/Slider_Mirror_3D.png').default} alt="Slider Mirror 3D" style={{maxWidth: '300px', height: 'auto', display: 'block', margin: '20px 0'}} />
 
-`Slider_Mirror` は鏡の解像度を段階的に調整できるスライダーです。
+`Slider_Mirror` は鏡の透明度を段階的に調整できるスライダーです。
 
 ### スライダーの基本
 
@@ -202,8 +217,8 @@ LuraSwitch2 では、用途に応じて多彩なデザインのスイッチを�
 `DefaultValue` で、スライダーの初期値（0〜100%）を設定できます。
 
 :::tip 💡 推奨設定
-- **個人設定系**（ミラー解像度、音量など）: `Local` モードを使用すると、各プレイヤーの好みを保存できます。
-- **ワールド全体設定系**（BGM 音量、環境ライトなど）: `Global` モードで全員に同じ設定を適用できます。
+- **ローカル**（ミラー透明度、音量など）: 基本的には `Local` モードが推奨です。
+- **グローバル**（演出の変更など）: `Global` モードで全員に同じ設定を適用できます。
 :::
 
 ### 機能別スライダーバリエーション
@@ -267,36 +282,36 @@ LuraSwitch2 では、用途に応じて多彩なデザインのスイッチを�
 
 ### 設定方法
 
-同期設定やデフォルト値の管理は、親オブジェクトの `ModeSwitch` にある `SwitchSelector` コンポーネントで行います。
+同期設定やデフォルト値の管理は、親オブジェクトの `ModeSwitch` 本体にある `SwitchSelector` コンポーネントで行います。
 
 :::tip 💡 使用例：ミラーの HQ/LQ 切り替え
 - **SwitchA** に HQ ミラーのアクティベーターを設定
 - **SwitchB** に LQ ミラーのアクティベーターを設定
 
-これで、どちらか一方だけが有効になる排他制御が完成します。プレイヤーは自分の環境に合わせて画質を選択できます。
+これで、どちらか一方だけが有効になる排他制御が完成します。プレイヤーは自分の環境に合わせて鏡のHQ／LQを選択できます。
 :::
 
 詳細については [モードスイッチ概要ページ](./mode-switch/overview.md) をご覧ください。
 
 ---
 
-## 5️⃣ 2D機能で操作方法を選ぼう 📱
+## 5️⃣ 2D切り替え機能で見た目を変更しよう
 
-<img src={require('@site/static/img/thumb_3D2D.png').default} alt="3D/2D切替" style={{maxWidth: '300px', height: 'auto', display: 'block', margin: '20px 0'}} />
+<img src={require('@site/static/img/thumb_3D2D.png').default} alt="3D/2D切替" style={{maxWidth: '400px', height: 'auto', display: 'block', margin: '20px 0'}} />
 
 すべてのスイッチとスライダーは **3Dモード** と **2Dモード** を簡単に切り替えられます。用途に合わせて最適な操作方法を選択してください。
 
 ### 3つの操作モード
 
-| モード | 説明 | 用途 |
-|--------|------|------|
-| **2D_Interact** | 2Dモード。トリガーに直接インタラクトする方式。近づく必要がありますが、レーザーポインターを向ける必要がありません。 | タッチパネル風の操作 |
-| **2D_UI** | 2Dモード。レーザーポインターで操作する方式。離れた場所から平面的な操作が可能です。 | 遠隔操作パネル |
-| **3D** | 3Dモード。トリガーをインタラクトする従来の方式。 | 空間内に配置された物理スイッチ |
+| モード          | 説明                                                                                                               | 用途             |
+| --------------- | ------------------------------------------------------------------------------------------------------------------ | ---------------- |
+| **2D_Interact** | 2Dモード。トリガーに直接インタラクトする方式。近づく必要がありますが、レーザーポインターを向ける必要がありません。 | 押しやすいパネル |
+| **2D_UI**       | 2Dモード。レーザーポインターで操作する方式。離れた場所からレーザーによる操作が可能です。                           | UIパネル         |
+| **3D**          | 3Dモード。トリガーをインタラクトする従来の方式。                                                                   | 物理スイッチ     |
 
 ---
 
-## 6️⃣ SwitchBoard で操作パネルを作ろう 📋
+## 6️⃣ SwitchBoard で操作パネルを作ろう 
 
 <img src={require('@site/static/img/LuraSwitchBoard_With2DSwitches.png').default} alt="LuraSwitchBoard With 2D Switches" style={{maxWidth: '400px', height: 'auto', display: 'block', margin: '20px 0'}} />
 
@@ -304,11 +319,15 @@ LuraSwitch2 では、用途に応じて多彩なデザインのスイッチを�
 
 ### セットアップ手順
 
-![LuraSwitchBoard Hierarchy](../static/img/LuraSwitchBoard_Hierarchy.jpg)
+<img src={require('@site/static/img/LuraSwitchBoard.png').default} alt="LuraSwitchBoard" style={{maxWidth: '400px', height: 'auto', display: 'block', margin: '20px 0'}} />
+
 
 ヒエラルキー内の `■■■■SwitchHere■■■■` の子として、2Dモードのスイッチやスライダーを配置してください。
 
-<img src={require('@site/static/img/LuraSwitchBoard.png').default} alt="LuraSwitchBoard" style={{maxWidth: '400px', height: 'auto', display: 'block', margin: '20px 0'}} />
+![LuraSwitchBoard Hierarchy](../static/img/LuraSwitchBoard_Hierarchy.jpg)
+
+
+
 
 ### ホルダーシステム
 
@@ -320,36 +339,38 @@ LuraSwitch2 では、用途に応じて多彩なデザインのスイッチを�
 
 インスペクタで `SwitchBoardHolder` を指定することで、移動・呼び出しが可能になります。
 
-:::tip 💡 効率的な配置のコツ
-- **複数のホルダーを配置**: ワールド内の各エリアに `SwitchBoardHolder` を配置することで、プレイヤーが最寄りの場所で操作パネルを呼び出せます。
-- **Pickup vs Static**: 持ち運びたい場合は Pickup モード、壁に固定したい場合は Static モードを選択してください。
-- **自動整列**: SwitchBoard 内のスイッチは自動的に整列されるため、手動で位置調整する必要はありません。
-:::
+
 
 ### 動作モード
 
 - **Pickup モード**: プレイヤーが持ち運べる可搬型パネル
 - **Static モード**: 壁面などに固定された据え置き型パネル
 
+:::tip 💡 効率的な配置のコツ
+- **複数のホルダーを配置**: ワールド内の各エリアに `SwitchBoardHolder` を配置し、Holdersに指定することで、プレイヤーの最寄りの位置に操作パネルが移動します。
+- **Pickup ／ Static**: 持ち運びたい場合は Pickup モード、壁に固定したい場合は Static モードを選択してください。  
+:::  
+
+    
 詳細については [SwitchBoard のページ](./utilities/switch-board.md) をご覧ください。
 
 ---
 
-## 7️⃣ SwitchSyncer で連動制御を実現しよう 🔗
+## 7️⃣ SwitchSyncer でスイッチを連動させよう 🔗
 
 ![SwitchSyncer Switches](../static/img/SwitchSyncer_Switches.png)
 ![SwitchSyncer Switches Active](../static/img/SwitchSyncer_Switches_Active.png)
 
-`SwitchSyncer` は、複数のスイッチやスライダーの状態を連動させるための強力なツールです。
+`SwitchSyncer` は、複数のスイッチやスライダーの状態を連動させるためのツールです。
 
 ### 使い方
 
 ![SwitchSyncer Inspector](../static/img/SwitchSyncer_Inspector.jpg)
 
-インスペクタで連動させたいスイッチを指定するだけで、それらのスイッチが同期されるようになります。
+SwitchSyncerにスイッチを指定するだけで、それらのスイッチが同期されるようになります。
 
 :::tip 💡 ベストプラクティス
-複数のスイッチを連動させる場合、**ターゲットの参照設定は1つのスイッチだけで行い**、残りのスイッチは `SwitchSyncer` で連動させる構成にすると、セットアップと保守が大幅に簡素化されます。
+複数のスイッチを常に連動させる場合、**ターゲットの参照設定は1つのスイッチだけで行い**、残りのスイッチは `SwitchSyncer` で連動させる構成にすると、セットアップと保守が大幅に簡素化されます。
 :::
 
 詳細については [SwitchSyncer のページ](./utilities/switch-syncer.md) をご覧ください。
@@ -360,7 +381,4 @@ LuraSwitch2 では、用途に応じて多彩なデザインのスイッチを�
 
 基本的な使い方を理解できたら、以下のページで詳細を確認してください：
 
-- 📖 [詳細なインストール手順](./getting-started/installation.md)
 - 🎓 [基本的な使い方](./getting-started/basic-usage.md)
-- 📚 [全機能一覧](./intro.md)
-- 🎨 [カスタマイズ方法](./advanced/customization.md)

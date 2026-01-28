@@ -48,8 +48,7 @@ sidebar_position: 3
 ### 用途例
 
 - 別エリアへの移動
-- スポーン地点への帰還
-- ショートカット移動
+- 部屋への入口スイッチ
 
 ---
 
@@ -82,6 +81,11 @@ sidebar_position: 3
 
 Fukuro UdonのManualObjectSyncを使用している場合も、このスイッチで位置リセットが可能です。
 
+
+:::tip
+旧LuraSwitchで、RigidbodyやVRCPickupがついていないオブジェクトを参照しているとエラーが起きてしまう問題は改善されました。
+:::
+
 ### 使い方
 
 1. `Switch_Reset.prefab` をシーンに配置します
@@ -91,35 +95,6 @@ Fukuro UdonのManualObjectSyncを使用している場合も、このスイッ�
 ### 用途例
 
 - 動かせるオブジェクトのリセット
-- ギミックの初期化
-- パズルのリセット機能
+- 片付けボタン
 
 ---
-
-## カスタム外部スクリプト
-
-独自のスイッチ:Externalモードを作成することも可能です。
-
-### 作成方法
-
-1. スイッチのプレハブを複製します
-2. 呼び出したいUdonスクリプトを作成します
-3. スイッチから適切なイベントを送信するように設定します
-
-詳しくは [カスタマイズガイド](../advanced/customization.md) をご覧ください。
-
----
-
-## 共通の使い方
-
-スイッチ:Externalモードも、基本的な操作は通常のスイッチと同じです。
-
-- **SwitchVisualMode**: 3D/2D切り替え
-- **SwitchText**: 表示テキスト設定
-- **SyncMode**: 同期設定
-
-## 次のステップ
-
-- [スイッチ:Toggleモード](./object-switches.md)
-- [スライダー](../sliders/overview.md)
-- [カスタマイズガイド](../advanced/customization.md)

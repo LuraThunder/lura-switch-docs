@@ -66,29 +66,20 @@ Verticalモードが使いにくい場合は、Horizontalモードに切り替�
 
 LuraSwitch2 には以下のスライダーが用意されています：
 
-### Slider_Audio
-オーディオの音量を調整
-
-### Slider_Light
-ライトの明るさを調整
-
 ### Slider_Mirror
 ミラーの解像度を調整
 
-### Slider_MirrorRotate
-ミラーの回転角度を調整
+### Slider_Audio / Slider_Music
+オーディオや音楽の音量を調整
 
-### Slider_AvatarLight
-アバターライトの明るさを調整
+### Slider_Light / Slider_AvatarLight
+ライトやアバターライトの明るさを調整
 
-### Slider_Music
-音楽の音量を調整
+### Slider_Night / Slider_PostEffect
+昼夜の明るさや画面効果を調整
 
-### Slider_Night
-昼夜の明るさを調整
-
-### Slider_Object
-オブジェクトのパラメータを調整
+### Slider_MirrorRotate / Slider_Object
+ミラーの回転角度やオブジェクトのパラメータを調整
 
 ### Slider_Collider
 コライダーの高さを調整（LuraCollider専用）
@@ -130,6 +121,9 @@ LuraSwitch2 には以下のスライダーが用意されています：
 
 各スライダーの詳細は、以下のページをご覧ください：
 
-- [Slider_Light](./slider-light.md)
-- [Slider_Audio](./slider-audio.md)
 - [Slider_Mirror](./slider-mirror.md)
+- [Slider_Audio](./slider-audio.md) / [Slider_Music](./slider-music.md)
+- [Slider_Light](./slider-light.md) / [Slider_AvatarLight](./slider-avatar-light.md)
+- [Slider_Night](./slider-night.md) / [Slider_PostEffect](./slider-posteffect.md)
+- [Slider_MirrorRotate](./slider-mirror-rotate.md) / [Slider_Object](./slider-object.md)
+- [Slider_Collider](./slider-collider.md)

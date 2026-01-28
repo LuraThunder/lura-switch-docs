@@ -32,7 +32,13 @@ sidebar_position: 1
 
 ### 1. ミラーの配置
 
-**====ReferenceMirror====** オブジェクトを移動・変形させると、ミラーが配置できます。
+<img src={require('@site/static/img/LuraMirror_1-1.jpg').default} alt="LuraMirror調整 1-1" />  
+
+
+
+ヒエラルキー内の **====ReferenceMirror====** オブジェクトを選択し、Position・Rotation・Scale を調整して、ミラーを好みの位置・サイズに配置してください。
+
+![LuraMirror Hierarchy](/img/LuraMirror_Hierarchy.jpg)
 
 :::tip
 まずは **ReferenceMirror** を調整することから始めましょう。これを動かすだけで、ミラーの位置とサイズが決まります。
@@ -42,44 +48,51 @@ sidebar_position: 1
 
 ![Mirror Area](/img/Mirror_Area.png)
 
-2つのエリアを設定します：
+ミラーシステムには2つのエリア設定があります。
+
+<img src={require('@site/static/img/LuraMirror_Area_Inspector.jpg').default} alt="LuraMirror Area Inspector" />
 
 #### FullArea（完全表示エリア）
 
-不透明度が**最大**の領域です。
+不透明度が**最大**の領域です。鏡が最高品質で表示される範囲を設定します。
 
-はっきり見えていてほしい領域を指定しましょう。
+はっきり見えていてほしい領域を指定しましょう。通常、鏡の正面に配置します。
 
 #### StartArea（起動エリア）
 
-ミラーが**起動する**領域です。
+ミラーが**起動する**領域です。プレイヤーがこの範囲に入ると鏡が起動します。
 
 :::warning
 **StartArea** の範囲内にいるとミラーが起動するため、**負荷が発生**し始めることに注意してください。
 
-範囲を広げすぎないようにしましょう。
+負荷管理のため、範囲を広げすぎないように適切なサイズに調整してください。
 :::
 
 ### 3. PreviewMirrorType
 
-![LuraMirror Inspector](/img/LuraMirror_Inspector.jpg)
-
 エディタ上でミラーの見え方を確認できます。
 
-**PreviewMirrorType** を切り替えることで、以下を確認：
+**PreviewMirrorType** を切り替えることで、ミラー配置後のイメージを確認できます。：
+<img src={require('@site/static/img/Mirror_PreviewMode_Inspector.jpg').default} alt="Mirror Preview Inspector" style={{maxWidth: '600px', height: 'auto'}} />
 
-- **None**: プレビューなし
+- **SetupMirror**: デフォルトのセットアップ用のオブジェクト。（アップロードすると消えます）
+- **Off**: ミラーオフ状態
 - **HQ**: 高品質ミラー
-- **LQ**: 低品質ミラー
-- **Both**: 両方
+- **LQ**: PlayerOnlyミラー
+
+
+<img src={require('@site/static/img/Mirror_HQPreview.jpg').default} alt="Mirror HQ Preview" style={{maxWidth: '600px', height: 'auto'}}/>
 
 :::info
-**注意**: 鏡が白くなっている場合は、**一度シーンを実行する**必要があります。
+**注意**: 鏡が白くなっている場合は、**一度シーンを実行する**（Play モード）必要があります。  
+Unity エディタ上で一度 Play モードに入ることで正しく表示されるようになります。
 :::
 
 ### 4. UI要素について
 
-エディタ上で表示されているテキストやUIは、**アップロード時には自動的に消える**のでそのままで大丈夫です。
+:::tip
+Lura's Mirrorのテキストや、エリアを現すUIはEditorOnlyのため、アップロード時には非表示になります。
+:::
 
 ## ミラーのオン/オフ制御
 
@@ -115,6 +128,7 @@ LuraMirror は特殊なトリガーを使用しています。
 これで、ミラーそのもののオン/オフを切り替えられます。
 
 ## Slider_Mirror との連携
+<img src={require('@site/static/img/Slider_Mirror_3D.png').default} alt="Mirror Preview Inspector" style={{maxWidth: '300px', height: 'auto'}} />
 
 [Slider_Mirror](../sliders/slider-mirror.md) を使用してミラーの透明度を変更できます。
 
@@ -128,6 +142,8 @@ LuraMirror は特殊なトリガーを使用しています。
 
 ## ModeSwitch_Mirror との連携
 
+<img src={require('@site/static/img/ModeSwitch_Mirror_x2_3D.png').default} alt="Mirror Preview Inspector" style={{maxWidth: '300px', height: 'auto'}} />
+
 [ModeSwitch_Mirror](../mode-switch/overview.md) を使用してHQ/LQを切り替えられます。
 
 ### 設定方法
@@ -139,20 +155,8 @@ ModeSwitch_Mirror_x2 は2つのスイッチから構成されています：
 
 これで、HQとLQを排他的に切り替えられます。
 
-## ベストプラクティス
 
-### エリアサイズ
 
-```
-FullArea: ミラーの前 1〜2m程度
-StartArea: ミラーの前 3〜5m程度
-```
-
-### パフォーマンス
-
-- StartArea を広げすぎない
-- 不要な時は HQ を無効に
-- Quest対応の場合はLQのみを推奨
 
 ## トラブルシューティング
 
@@ -164,10 +168,6 @@ StartArea: ミラーの前 3〜5m程度
 
 - StartArea の範囲を確認
 - Activator のアクティブ状態を確認
-
-### 透明度が変わらない
-
-FullArea と StartArea の距離を確認してください。
 
 ## 次のステップ
 

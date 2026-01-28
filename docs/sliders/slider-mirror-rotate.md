@@ -15,24 +15,12 @@ sidebar_position: 13
   </div>
 </div>
 
-ミラーの回転角度を調整するスライダーです。
+ミラーの回転角度を調整することを想定したスライダーです。
 
 ## 機能
 
-ミラーの角度を連続的に調整できます。
-
-全身鏡の角度を変えることで、様々なアングルから自分のアバターを確認できます。
-
-## パラメータ
-
-| パラメータ | 説明 | デフォルト値 |
-|----------|------|------------|
-| Target Mirror | 制御対象のミラーオブジェクト | なし（必須） |
-| Min Angle | 最小角度 | -30 |
-| Max Angle | 最大角度 | 30 |
-| DefaultValue | 初期値（0-1） | 0.5 |
-| SyncMode | 同期モード | None |
-| SliderDirection | 向き | Vertical |
+ミラーの角度を調整することを目的としています。  
+中身はオブジェクトスライダーと同一です。
 
 ![Target Setting](/img/Slider_MirrorRotate_TargetSetting_Inspector.jpg)
 
@@ -40,55 +28,19 @@ sidebar_position: 13
 
 1. `Slider_MirrorRotate.prefab` をシーンに配置
 2. **====TargetSetting====** を開く
-3. **Target Mirror** にミラーのオブジェクトを設定
-4. **Min Angle** と **Max Angle** で回転範囲を設定
+3. **TransformTargets** にミラーのオブジェクトを設定
+4. **TransformRefs_A** に値が0の時の角度を設定
+5. **TransformRefs_B** に値がMaxの時の角度を設定
 
 ## 仕組み
 
-スライダーの値に応じてミラーが回転します：
-
-- **0%**: Min Angle（例：-30度）
-- **50%**: 0度（正面）
-- **100%**: Max Angle（例：+30度）
+オブジェクトスライダーと同様に、TransformRefs_AとTransformRefs_Bを参考の値とし  
+角度や回転を補完します。
 
 ## 用途例
 
-### 全身鏡の角度調整
-
-```
-Target: 全身鏡オブジェクト
-Min Angle: -45
-Max Angle: 45
-DefaultValue: 0.5（正面）
-```
-
-### 天井ミラー
-
-```
-Min Angle: 0
-Max Angle: 90
-DefaultValue: 0.3（やや下向き）
-```
-
-## 回転軸の設定
-
-ミラーの回転軸は、スクリプト内で設定できます：
-
-- **X軸**: 上下に傾ける
-- **Y軸**: 左右に回転
-- **Z軸**: 傾斜
-
-## ベストプラクティス
-
-:::tip
-角度範囲は **-45度 〜 +45度** 程度が実用的です。
-
-大きすぎる角度は、ミラーが見づらくなる可能性があります。
-:::
-
-## LuraMirror との併用
-
-[LuraMirror](../utilities/lura-mirror.md) と組み合わせることで、高性能なミラーの角度調整が可能です。
+### ベッド上ミラー
+睡眠用ミラーに使う想定で用意しました。  
 
 ## 関連コンポーネント
 
