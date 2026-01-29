@@ -2,7 +2,7 @@
 sidebar_position: 3
 ---
 
-# スイッチ:Externalモード
+# スイッチ : Externalモード
 
 **外部スクリプト呼び出しスイッチ**
 

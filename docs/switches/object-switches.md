@@ -2,7 +2,7 @@
 sidebar_position: 2
 ---
 
-# スイッチ:Toggleモード
+# スイッチ : Toggleモード
 
 **オブジェクト切り替えスイッチ**
 
