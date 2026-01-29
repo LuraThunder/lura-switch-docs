@@ -140,6 +140,12 @@ LuraMirror は特殊なトリガーを使用しています。
 
 これで、ミラーの解像度をスライダーで調整できます。
 
+:::tip スライダーだけでも運用可能
+**スライダーの値を0**にした場合でも、ミラーは**非アクティブ状態**になり、**負荷は発生しなくなります**。  
+つまり、**メインのミラースイッチ無しでもスライダーだけで鏡のオン・オフを管理することも可能です**。  
+使いやすいかどうかはユーザーによりますが、選択肢の一つとして覚えておくと良いでしょう。
+:::
+
 ## ModeSwitch_Mirror との連携
 
 <img src={require('@site/static/img/ModeSwitch_Mirror_x2_3D.png').default} alt="Mirror Preview Inspector" style={{maxWidth: '300px', height: 'auto'}} />
