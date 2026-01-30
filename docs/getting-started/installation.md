@@ -12,11 +12,8 @@ LuraSwitch2 を使用するには、以下の環境が必要です。
 
 - **Unity**: 2022.3.6f1 以上
 - **VRChat SDK**: SDK3 - Worlds
-- **UdonSharp**: 1.x
+- **UdonSharp**: 3.10 以上
 
-:::info 💡 推奨ツール
-VRChat SDK と UdonSharp は **VCC (VRChat Creator Companion)** を使用してインストールすることを強く推奨します。
-:::
 
 ## 🛠️ インストール手順
 
@@ -50,6 +47,10 @@ Assets/
 ## サンプルシーンの確認
 
 `Assets/QuickBrown/LuraSwitch2/SCENE/LuraSwitch2_SAMPLE.unity` を開くと、各コンポーネントの使用例を確認できます。
+
+## TextMeshPro のインポート
+テキストを正しく表示するために、TextMeshPro パッケージをインポートしてください。
+<img src={require('@site/static/img/textmeshpro.jpg').default}  />
 
 ## 🎯 次のステップ
 
