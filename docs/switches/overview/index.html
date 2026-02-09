@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="generator" content="Docusaurus v3.9.2">
 <title data-rh="true">🏷️スイッチ概要 | Lura Switch 2 説明書</title><meta data-rh="true" name="viewport" content="width=device-width,initial-scale=1"><meta data-rh="true" name="twitter:card" content="summary_large_image"><meta data-rh="true" property="og:image" content="https://LuraThunder.github.io/lura-switch-docs/img/LuraSwitch2-social-card.png"><meta data-rh="true" name="twitter:image" content="https://LuraThunder.github.io/lura-switch-docs/img/LuraSwitch2-social-card.png"><meta data-rh="true" property="og:url" content="https://LuraThunder.github.io/lura-switch-docs/docs/switches/overview"><meta data-rh="true" property="og:locale" content="ja"><meta data-rh="true" name="docusaurus_locale" content="ja"><meta data-rh="true" name="docsearch:language" content="ja"><meta data-rh="true" name="docusaurus_version" content="current"><meta data-rh="true" name="docusaurus_tag" content="docs-default-current"><meta data-rh="true" name="docsearch:version" content="current"><meta data-rh="true" name="docsearch:docusaurus_tag" content="docs-default-current"><meta data-rh="true" property="og:title" content="🏷️スイッチ概要 | Lura Switch 2 説明書"><meta data-rh="true" name="description" content="LuraSwitch2 のスイッチシステムについて説明します。"><meta data-rh="true" property="og:description" content="LuraSwitch2 のスイッチシステムについて説明します。"><link data-rh="true" rel="icon" href="/lura-switch-docs/img/icon.ico"><link data-rh="true" rel="canonical" href="https://LuraThunder.github.io/lura-switch-docs/docs/switches/overview"><link data-rh="true" rel="alternate" href="https://LuraThunder.github.io/lura-switch-docs/docs/switches/overview" hreflang="ja"><link data-rh="true" rel="alternate" href="https://LuraThunder.github.io/lura-switch-docs/docs/switches/overview" hreflang="x-default"><script data-rh="true" type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"🏷️スイッチ概要","item":"https://LuraThunder.github.io/lura-switch-docs/docs/switches/overview"}]}</script><link rel="stylesheet" href="/lura-switch-docs/assets/css/styles.5e43b40a.css">
-<script src="/lura-switch-docs/assets/js/runtime~main.663db32f.js" defer="defer"></script>
+<script src="/lura-switch-docs/assets/js/runtime~main.dd52c628.js" defer="defer"></script>
 <script src="/lura-switch-docs/assets/js/main.9c919251.js" defer="defer"></script>
 </head>
 <body class="navigation-with-keyboard">
@@ -46,13 +46,14 @@
 <p>LuraSwitch2 ではカラー分類を以下のように再定義しました（絵文字つき）。</p>
 <table><thead><tr><th>カラー (絵文字)</th><th>機能</th><th>説明</th></tr></thead><tbody><tr><td><strong>White ⚪</strong></td><td>ミラーの切り替え</td><td>Mirror（ミラー）の表示/非表示を制御</td></tr><tr><td><strong>Orange 🟠</strong></td><td>オブジェクトの切り替え</td><td>Object、Pen、Key などのゲームオブジェクトの表示/非表示を制御</td></tr><tr><td><strong>Pink 🔴</strong></td><td>メディアの切り替え</td><td>Audio、Video、Music などのメディア再生を制御</td></tr><tr><td><strong>Blue 🔵</strong></td><td>機能の切り替え</td><td>Chair、LiteModeなどの特定機能のオン/オフを制御</td></tr><tr><td><strong>Green 🟢</strong></td><td>コライダーの切り替え</td><td>Bed、Colliderなどの物理コライダーのオン/オフを制御</td></tr><tr><td><strong>Purple 🟣</strong></td><td>見た目の切り替え</td><td>PostEffect、Night、Effectなどの視覚効果を制御</td></tr><tr><td><strong>Warm 🟡</strong></td><td>ライトの切り替え</td><td>AvatarLight、Lightなどの照明のオン/オフを制御</td></tr><tr><td><strong>LightGreen 🟩</strong></td><td>機能の即時発動</td><td>Teleport、Reset等の外部スクリプトを即座に実行</td></tr></tbody></table>
 <h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="共通パラメータ">共通パラメータ<a href="#共通パラメータ" class="hash-link" aria-label="共通パラメータ への直接リンク" title="共通パラメータ への直接リンク" translate="no">​</a></h2>
-<p><img decoding="async" loading="lazy" alt="Inspector画面" src="/lura-switch-docs/assets/images/Switch_Inspector-4003b0989e4ce8bda725ada5170d62ac.jpg" width="788" height="1136" class="img_ev3q"></p>
+<p><img decoding="async" loading="lazy" alt="Inspector画面" src="/lura-switch-docs/assets/images/Switch_Inspector-238bfdd0dba272034b958dee271670a1.jpg" width="741" height="1200" class="img_ev3q"></p>
 <p>すべてのスイッチに共通するパラメータ：</p>
 <h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="基本設定">基本設定<a href="#基本設定" class="hash-link" aria-label="基本設定 への直接リンク" title="基本設定 への直接リンク" translate="no">​</a></h3>
 <ul>
 <li class=""><strong>DefaultState</strong>: 初期状態（On/Off）</li>
 <li class=""><strong>SwitchVisualMode</strong>: 表示モード（3D/2D）</li>
 <li class=""><strong>SwitchText</strong>: スイッチに表示するテキスト</li>
+<li class=""><strong>Switch_InteractionText</strong>: インタラクション時のテキスト</li>
 </ul>
 <h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="同期設定">同期設定<a href="#同期設定" class="hash-link" aria-label="同期設定 への直接リンク" title="同期設定 への直接リンク" translate="no">​</a></h3>
 <ul>
