@@ -110,6 +110,7 @@ LuraSwitch2 ではカラー分類を以下のように再定義しました（�
 - **DefaultState**: 初期状態（On/Off）
 - **SwitchVisualMode**: 表示モード（3D/2D）
 - **SwitchText**: スイッチに表示するテキスト
+- **Switch_InteractionText**: インタラクション時のテキスト
 
 ### 同期設定
 

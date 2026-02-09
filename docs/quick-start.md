@@ -172,6 +172,21 @@ Assets/
 Play モードに入らなくても、視覚的に状態を確認できます。
 :::
 
+### SwitchTextの設定
+
+![Switch Text Inspector](../static/img/switch_Text_Inspector.jpg)
+
+`SwitchText` を記入すると、3Dスイッチと2Dスイッチに表示されるテキストを一括で設定できます。
+   
+`Switch_InformationText` を記入すると、VRChatでUseしようとするときに浮かび上がるテキストを設定できます。  
+
+
+:::tip 💡 スイッチテキストのヒント
+- **Switch_InformationText**: `Mirror(Local)`のようにLocal/Global/LocalSave の状態が自動的に追加されます。
+- **Text Auto Update**: チェックを外すと自動設定されなくなります。手動でテキストを設定する必要がある場合はこちらをオフにしてください。
+- **文字数オーバー**: 文字数が多くなって表示がおかしくなった場合は、Textのフォントサイズを直接調整してください。
+:::
+
 ### 多様なスイッチバリエーション
 
 LuraSwitch2 では、用途に応じて多彩なデザインのスイッチを用意しています。
@@ -188,6 +203,10 @@ LuraSwitch2 では、用途に応じて多彩なデザインのスイッチを�
   <div style={{textAlign: 'center'}}>
     <img src={require('@site/static/img/Switch_Key_3D.png').default} alt="Switch Key" style={{backgroundColor: '#000', width: '100%', height: 'auto'}} />
     <p>Key（キー）</p>
+  </div>
+    <div style={{textAlign: 'center'}}>
+    <img src={require('@site/static/img/Switch_Information_3D.png').default} alt="Switch Information" style={{backgroundColor: '#000', width: '100%', height: 'auto'}} />
+    <p>Information（情報）</p>
   </div>
   <div style={{textAlign: 'center'}}>
     <img src={require('@site/static/img/Switch_Audio_3D.png').default} alt="Switch Audio" style={{backgroundColor: '#000', width: '100%', height: 'auto'}} />
@@ -209,6 +228,10 @@ LuraSwitch2 では、用途に応じて多彩なデザインのスイッチを�
     <img src={require('@site/static/img/Switch_LiteMode_3D.png').default} alt="Switch LiteMode" style={{backgroundColor: '#000', width: '100%', height: 'auto'}} />
     <p>LiteMode（軽量モード）</p>
   </div>
+    <div style={{textAlign: 'center'}}>
+    <img src={require('@site/static/img/Switch_SavePoint_3D.png').default} alt="Switch SavePoint" style={{backgroundColor: '#000', width: '100%', height: 'auto'}} />
+    <p>SavePoint（セーブポイント）</p>
+  </div>
   <div style={{textAlign: 'center'}}>
     <img src={require('@site/static/img/Switch_Bed_3D.png').default} alt="Switch Bed" style={{backgroundColor: '#000', width: '100%', height: 'auto'}} />
     <p>Bed（ベッド）</p>
@@ -229,6 +252,10 @@ LuraSwitch2 では、用途に応じて多彩なデザインのスイッチを�
     <img src={require('@site/static/img/Switch_Effect_3D.png').default} alt="Switch Effect" style={{backgroundColor: '#000', width: '100%', height: 'auto'}} />
     <p>Effect（エフェクト）</p>
   </div>
+    <div style={{textAlign: 'center'}}>
+    <img src={require('@site/static/img/Switch_Skybox_3D.png').default} alt="Switch Skybox" style={{backgroundColor: '#000', width: '100%', height: 'auto'}} />
+    <p>Skybox（スカイボックス）</p>
+  </div>
   <div style={{textAlign: 'center'}}>
     <img src={require('@site/static/img/Switch_AvatarLight_3D.png').default} alt="Switch AvatarLight" style={{backgroundColor: '#000', width: '100%', height: 'auto'}} />
     <p>AvatarLight（アバターライト）</p>
@@ -236,6 +263,25 @@ LuraSwitch2 では、用途に応じて多彩なデザインのスイッチを�
   <div style={{textAlign: 'center'}}>
     <img src={require('@site/static/img/Switch_Light_3D.png').default} alt="Switch Light" style={{backgroundColor: '#000', width: '100%', height: 'auto'}} />
     <p>Light（ライト）</p>
+  </div>
+
+
+
+  <div style={{textAlign: 'center'}}>
+    <img src={require('@site/static/img/Switch_Language_JP_3D.png').default} alt="Switch Language JP" style={{backgroundColor: '#000', width: '100%', height: 'auto'}} />
+    <p>Language JP（日本語）</p>
+  </div>
+  <div style={{textAlign: 'center'}}>
+    <img src={require('@site/static/img/Switch_Language_EN_3D.png').default} alt="Switch Language EN" style={{backgroundColor: '#000', width: '100%', height: 'auto'}} />
+    <p>Language EN（英語）</p>
+  </div>
+  <div style={{textAlign: 'center'}}>
+    <img src={require('@site/static/img/Switch_Language_KO_3D.png').default} alt="Switch Language KO" style={{backgroundColor: '#000', width: '100%', height: 'auto'}} />
+    <p>Language KO（韓国語）</p>
+  </div>
+  <div style={{textAlign: 'center'}}>
+    <img src={require('@site/static/img/Switch_Language_CH_3D.png').default} alt="Switch Language CH" style={{backgroundColor: '#000', width: '100%', height: 'auto'}} />
+    <p>Language CH（中国語）</p>
   </div>
 </div>
 
@@ -295,6 +341,10 @@ LuraSwitch2 では、用途に応じて多彩なデザインのスイッチを�
     <img src={require('@site/static/img/Slider_MirrorRotate_3D.png').default} alt="Slider MirrorRotate" style={{backgroundColor: '#000', width: '100%', height: 'auto'}} />
     <p>MirrorRotate（鏡回転）</p>
   </div>
+   <div style={{textAlign: 'center'}}>
+    <img src={require('@site/static/img/Slider_MirrorHeight_3D.png').default} alt="Slider MirrorHeight" style={{backgroundColor: '#000', width: '100%', height: 'auto'}} />
+    <p>MirrorHeight（鏡の高さ）</p>
+  </div>
   <div style={{textAlign: 'center'}}>
     <img src={require('@site/static/img/Slider_Object_3D.png').default} alt="Slider Object" style={{backgroundColor: '#000', width: '100%', height: 'auto'}} />
     <p>Object（オブジェクト）</p>
@@ -321,7 +371,7 @@ LuraSwitch2 では、用途に応じて多彩なデザインのスイッチを�
   </div>
   <div style={{textAlign: 'center'}}>
     <img src={require('@site/static/img/Slider_Night_3D.png').default} alt="Slider Night" style={{backgroundColor: '#000', width: '100%', height: 'auto'}} />
-    <p>Night（昼夜切替）</p>
+    <p>Night（ナイトモード強度）</p>
   </div>
   <div style={{textAlign: 'center'}}>
     <img src={require('@site/static/img/Slider_PostEffect_3D.png').default} alt="Slider PostEffect" style={{backgroundColor: '#000', width: '100%', height: 'auto'}} />

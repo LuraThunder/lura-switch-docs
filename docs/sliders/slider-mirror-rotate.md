@@ -34,8 +34,14 @@ sidebar_position: 13
 
 ## 仕組み
 
-オブジェクトスライダーと同様に、TransformRefs_AとTransformRefs_Bを参考の値とし  
-角度や回転を補完します。
+- TransformRefs_AとTransformRefs_Bを参考の値として、スライダーの値に応じてTransformTargetsの角度や回転を変更します。
+
+:::tip 例
+- TransformRefs_Aに 垂直のGameObject(0, 0, 0) を設定
+- TransformRefs_Bに 水平のGameObject (0, 180, 0) を設定
+- スライダーの値が中間値の場合、TransformTargetsの回転は (0, 90, 0) になります。
+:::
+
 
 ## 用途例
 

@@ -200,11 +200,71 @@ Video Playerの再生/停止を制御します。
 - パフォーマンス最適化
 - Quest向けの軽量モード切り替え
 
-### Switch_VROnly
 
-VR専用機能の切り替えを行います。
+### Switch_SavePoint
 
-**用途例**: VRユーザー向けギミックの制御
+<div style={{display: 'flex', gap: '20px', marginBottom: '20px'}}>
+  <div>
+    <img src={require('@site/static/img/Switch_SavePoint_3D.png').default} alt="Switch_SavePoint 3D" style={{maxWidth: '200px', backgroundColor: '#000'}} />
+    <p style={{textAlign: 'center'}}>3Dモード</p>
+  </div>
+  <div>
+    <img src={require('@site/static/img/Switch_SavePoint_2D.png').default} alt="Switch_SavePoint 2D" style={{maxWidth: '200px', backgroundColor: '#000'}} />
+    <p style={{textAlign: 'center'}}>2Dモード</p>
+  </div>
+  <div>
+    <img src={require('@site/static/img/savepoint2.gif').default} alt="Switch_SavePoint 2D" style={{maxWidth: '200px', backgroundColor: '#000'}} />
+    <p style={{textAlign: 'center'}}>セーブポイントオブジェクト</p>
+  </div>
+</div>
+
+アクティブ時、ジョインやリスポーン地点が上書きされるセーブポイントを出現させます。 
+
+:::tip 💡 セーブポイントについて
+- アクティブになっていると、SwitchFunction_SavePoint の位置にスポーンするようになります。
+- ====SavePoint_Activator==== がアクティブになっていると、セーブポイントが有効になります。
+:::
+
+:::warning 注意
+- セーブポイントが複数ある場合は正しく動作しません。同時に配置する場合、アクティブになっているものは１つだけである必要があります。
+- そのため、複数設置する際はModeSelectorなどを使って、同時にアクティブになるものが１つだけになるようにしてください。
+:::
+
+**用途例**
+- チェックポイントシステムとして
+- リスポーン地点の設定など
+
+
+
+### Switch_Language
+
+<div style={{display: 'flex', gap: '20px', marginBottom: '20px'}}>
+  <div>
+    <img src={require('@site/static/img/Switch_Language_JP_3D.png').default} alt="Switch_Language 3D" style={{maxWidth: '200px', backgroundColor: '#000'}} />
+    <p style={{textAlign: 'center'}}>日本語</p>
+  </div>
+  <div>
+    <img src={require('@site/static/img/Switch_Language_EN_3D.png').default} alt="Switch_Language 2D" style={{maxWidth: '200px', backgroundColor: '#000'}} />
+    <p style={{textAlign: 'center'}}>英語</p>
+  </div>
+  <div>
+    <img src={require('@site/static/img/Switch_Language_KO_3D.png').default} alt="Switch_Language 2D" style={{maxWidth: '200px', backgroundColor: '#000'}} />
+    <p style={{textAlign: 'center'}}>韓国語</p>
+  </div>
+  <div>
+    <img src={require('@site/static/img/Switch_Language_CH_3D.png').default} alt="Switch_Language 2D" style={{maxWidth: '200px', backgroundColor: '#000'}} />
+    <p style={{textAlign: 'center'}}>中国語</p>
+  </div>
+</div>
+
+言語設定用のスイッチです。
+:::tip
+- 任意の使い方が可能ですが、ModeSelectorなどと組み合わせて使用することを想定しています。
+- 例えば、複数の言語スイッチを用意し、ModeSelectorで一つだけアクティブにすることで言語切り替えが可能になります。
+:::
+
+**用途例**
+- 言語切り替えシステム
 
 ---
 
@@ -310,6 +370,35 @@ Colliderの有効/無効を切り替えます。
 - パーティクルエフェクト
 - 視覚効果の制御
 
+### Switch_Skybox
+
+<div style={{display: 'flex', gap: '20px', marginBottom: '20px'}}>
+  <div>
+    <img src={require('@site/static/img/Switch_Skybox_3D.png').default} alt="Switch_Skybox 3D" style={{maxWidth: '200px', backgroundColor: '#000'}} />
+    <p style={{textAlign: 'center'}}>3Dモード</p>
+  </div>
+  <div>
+    <img src={require('@site/static/img/Switch_Skybox_2D.png').default} alt="Switch_Skybox 2D" style={{maxWidth: '200px', backgroundColor: '#000'}} />
+    <p style={{textAlign: 'center'}}>2Dモード</p>
+  </div>
+</div>
+
+Skyboxの切り替えを行います。
+
+:::tip 💡 Skyboxについて
+- アクティブ状態になると`SkyboxSetter`に登録したSkyboxに切り替わります。
+- `====SkyboxActivator====` がアクティブになっていると、Skyboxが変更されます。
+- フォグ設定も可能です。Skyboxを変更する際は、フォグ設定も一緒に変更することをおすすめします。
+:::
+
+:::warning 注意
+- 複数配置する場合は、ModeSelectorなどを使って同時にアクティブになるものが１つだけになるようにしてください。
+ :::
+
+**用途例**
+- Skyboxの切り替え
+- フォグ設定の変更
+
 ---
 
 ## Warm カテゴリ
@@ -352,8 +441,6 @@ Colliderの有効/無効を切り替えます。
 - 室内照明の制御
 - ステージライト
 - 雰囲気ライト
-
-**Quest対応**: リアルタイムライトは負荷が高いため、ベイクドライトの使用を検討してください。
 
 ---
 
