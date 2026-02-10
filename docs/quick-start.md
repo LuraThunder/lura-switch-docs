@@ -192,6 +192,14 @@ Play モードに入らなくても、視覚的に状態を確認できます。
 LuraSwitch2 では、用途に応じて多彩なデザインのスイッチを用意しています。
 
 <div style={{display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(150px, 1fr))', gap: '20px', margin: '20px 0'}}>
+ <div style={{textAlign: 'center'}}>
+    <img src={require('@site/static/img/Switch_MirrorHQ_3D.png').default} alt="Switch MirrorHQ" style={{backgroundColor: '#000', width: '100%', height: 'auto'}} />
+    <p>MirrorHQ（ミラーHQ）</p>
+  </div>
+  <div style={{textAlign: 'center'}}>
+    <img src={require('@site/static/img/Switch_MirrorLQ_3D.png').default} alt="Switch MirrorLQ" style={{backgroundColor: '#000', width: '100%', height: 'auto'}} />
+    <p>MirrorLQ（ミラーLQ）</p>
+  </div>
   <div style={{textAlign: 'center'}}>
     <img src={require('@site/static/img/Switch_Object_3D.png').default} alt="Switch Object" style={{backgroundColor: '#000', width: '100%', height: 'auto'}} />
     <p>Object（オブジェクト）</p>
@@ -207,6 +215,30 @@ LuraSwitch2 では、用途に応じて多彩なデザインのスイッチを�
     <div style={{textAlign: 'center'}}>
     <img src={require('@site/static/img/Switch_Information_3D.png').default} alt="Switch Information" style={{backgroundColor: '#000', width: '100%', height: 'auto'}} />
     <p>Information（情報）</p>
+  </div>
+        <div style={{textAlign: 'center'}}>
+    <img src={require('@site/static/img/Switch_Accept_3D.png').default} alt="Switch Accept" style={{backgroundColor: '#000', width: '100%', height: 'auto'}} />
+    <p>Accept（承認）</p>
+  </div>
+  <div style={{textAlign: 'center'}}>
+    <img src={require('@site/static/img/Switch_Setting_3D.png').default} alt="Switch Setting" style={{backgroundColor: '#000', width: '100%', height: 'auto'}} />
+    <p>Setting（設定）</p>
+  </div>
+  <div style={{textAlign: 'center'}}>
+    <img src={require('@site/static/img/Switch_Power_3D.png').default} alt="Switch Power" style={{backgroundColor: '#000', width: '100%', height: 'auto'}} />
+    <p>Power（電源）</p>
+  </div>
+  <div style={{textAlign: 'center'}}>
+    <img src={require('@site/static/img/Switch_Liquar_3D.png').default} alt="Switch Liquar" style={{backgroundColor: '#000', width: '100%', height: 'auto'}} />
+    <p>Liquar（リキュール）</p>
+  </div>
+    <div style={{textAlign: 'center'}}>
+    <img src={require('@site/static/img/Switch_Food_3D.png').default} alt="Switch Food" style={{backgroundColor: '#000', width: '100%', height: 'auto'}} />
+    <p>Food（食べ物）</p>
+  </div>
+      <div style={{textAlign: 'center'}}>
+    <img src={require('@site/static/img/Switch_Heart_3D.png').default} alt="Switch Heart" style={{backgroundColor: '#000', width: '100%', height: 'auto'}} />
+    <p>Heart（ハート）</p>
   </div>
   <div style={{textAlign: 'center'}}>
     <img src={require('@site/static/img/Switch_Audio_3D.png').default} alt="Switch Audio" style={{backgroundColor: '#000', width: '100%', height: 'auto'}} />
@@ -232,13 +264,50 @@ LuraSwitch2 では、用途に応じて多彩なデザインのスイッチを�
     <img src={require('@site/static/img/Switch_SavePoint_3D.png').default} alt="Switch SavePoint" style={{backgroundColor: '#000', width: '100%', height: 'auto'}} />
     <p>SavePoint（セーブポイント）</p>
   </div>
+      <div style={{textAlign: 'center'}}>
+    <img src={require('@site/static/img/Switch_SavePoint_3D.png').default} alt="Switch SavePoint" style={{backgroundColor: '#000', width: '100%', height: 'auto'}} />
+    <p>SavePoint（セーブポイント）</p>
+  </div>
   <div style={{textAlign: 'center'}}>
-    <img src={require('@site/static/img/Switch_Bed_3D.png').default} alt="Switch Bed" style={{backgroundColor: '#000', width: '100%', height: 'auto'}} />
-    <p>Bed（ベッド）</p>
+    <img src={require('@site/static/img/Switch_1_3D.png').default} alt="Switch 1" style={{backgroundColor: '#000', width: '100%', height: 'auto'}} />
+    <p>One</p>
+  </div>
+    <div style={{textAlign: 'center'}}>
+    <img src={require('@site/static/img/Switch_2_3D.png').default} alt="Switch 2" style={{backgroundColor: '#000', width: '100%', height: 'auto'}} />
+    <p>Two</p>
+  </div>
+    <div style={{textAlign: 'center'}}>
+    <img src={require('@site/static/img/Switch_3_3D.png').default} alt="Switch 3" style={{backgroundColor: '#000', width: '100%', height: 'auto'}} />
+    <p>Three</p>
+  </div>
+    <div style={{textAlign: 'center'}}>
+    <img src={require('@site/static/img/Switch_4_3D.png').default} alt="Switch 4" style={{backgroundColor: '#000', width: '100%', height: 'auto'}} />
+    <p>Four</p>
+  </div>
+  
+  <div style={{textAlign: 'center'}}>
+    <img src={require('@site/static/img/Switch_Language_JP_3D.png').default} alt="Switch Language JP" style={{backgroundColor: '#000', width: '100%', height: 'auto'}} />
+    <p>Language JP（日本語）</p>
+  </div>
+  <div style={{textAlign: 'center'}}>
+    <img src={require('@site/static/img/Switch_Language_EN_3D.png').default} alt="Switch Language EN" style={{backgroundColor: '#000', width: '100%', height: 'auto'}} />
+    <p>Language EN（英語）</p>
+  </div>
+  <div style={{textAlign: 'center'}}>
+    <img src={require('@site/static/img/Switch_Language_KO_3D.png').default} alt="Switch Language KO" style={{backgroundColor: '#000', width: '100%', height: 'auto'}} />
+    <p>Language KO（韓国語）</p>
+  </div>
+  <div style={{textAlign: 'center'}}>
+    <img src={require('@site/static/img/Switch_Language_CH_3D.png').default} alt="Switch Language CH" style={{backgroundColor: '#000', width: '100%', height: 'auto'}} />
+    <p>Language CH（中国語）</p>
   </div>
   <div style={{textAlign: 'center'}}>
     <img src={require('@site/static/img/Switch_Collider_3D.png').default} alt="Switch Collider" style={{backgroundColor: '#000', width: '100%', height: 'auto'}} />
     <p>Collider（コライダー）</p>
+  </div>
+    <div style={{textAlign: 'center'}}>
+    <img src={require('@site/static/img/Switch_Bed_3D.png').default} alt="Switch Bed" style={{backgroundColor: '#000', width: '100%', height: 'auto'}} />
+    <p>Bed（ベッド）</p>
   </div>
   <div style={{textAlign: 'center'}}>
     <img src={require('@site/static/img/Switch_PostEffect_3D.png').default} alt="Switch PostEffect" style={{backgroundColor: '#000', width: '100%', height: 'auto'}} />
@@ -267,22 +336,6 @@ LuraSwitch2 では、用途に応じて多彩なデザインのスイッチを�
 
 
 
-  <div style={{textAlign: 'center'}}>
-    <img src={require('@site/static/img/Switch_Language_JP_3D.png').default} alt="Switch Language JP" style={{backgroundColor: '#000', width: '100%', height: 'auto'}} />
-    <p>Language JP（日本語）</p>
-  </div>
-  <div style={{textAlign: 'center'}}>
-    <img src={require('@site/static/img/Switch_Language_EN_3D.png').default} alt="Switch Language EN" style={{backgroundColor: '#000', width: '100%', height: 'auto'}} />
-    <p>Language EN（英語）</p>
-  </div>
-  <div style={{textAlign: 'center'}}>
-    <img src={require('@site/static/img/Switch_Language_KO_3D.png').default} alt="Switch Language KO" style={{backgroundColor: '#000', width: '100%', height: 'auto'}} />
-    <p>Language KO（韓国語）</p>
-  </div>
-  <div style={{textAlign: 'center'}}>
-    <img src={require('@site/static/img/Switch_Language_CH_3D.png').default} alt="Switch Language CH" style={{backgroundColor: '#000', width: '100%', height: 'auto'}} />
-    <p>Language CH（中国語）</p>
-  </div>
 </div>
 
 スイッチの詳細な機能については、[スイッチ概要ページ](./switches/overview.md) をご覧ください。
