@@ -17,9 +17,24 @@ sidebar_position: 2
 
 Lightコンポーネントの明るさを調整するスライダーです。  
 スポットライトやポイントライトなどの使用を想定しています。
-:::tip  
-将来的にライトボリュームに対応したいと考えていますが、現在は未対応です。
+:::tip VRCLV対応 
+**VRC Light Volume** に対応しました！ 
+- `TargetPointLightVolumes` に`PointLightVolume` を設定することで、負荷の低い照明のコントロールを行えます。
 :::
+
+:::warning 注意事項
+- VRC Light VolumeをVPMでパッケージに導入する必要があります 
+- [**https://redsim.github.io/vpmlisting/**](https://redsim.github.io/vpmlisting/) 
+:::
+
+
+:::tip
+- この機能を使いたいだけであれば、**VRCLVのベイクや空間の設定は必要ありません。**
+- 使うのは**PointLightVolume**コンポーネントです。**空のGameObjectなどにPointLightVolumeをアタッチ**してください。
+- 地面や壁、アバターなどに影響するためには**LightVolumeに対応したシェーダー**が必要です。(Filamented, LilToon等)
+- VRCLightVolumeの詳細については[**VRCLV公式ドキュメント**](https://github.com/REDSIM/VRCLightVolumes/blob/main/README.md)をご覧ください。
+:::
+
 
 ## 機能
 
