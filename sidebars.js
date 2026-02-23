@@ -83,6 +83,7 @@ const sidebars = {
         'utilities/lura-mirror',
         'utilities/lura-collider',
         'utilities/switch-syncer',
+        'utilities/switch-selector',
         'utilities/height-offsetter',
         'utilities/switch-board',
       ],

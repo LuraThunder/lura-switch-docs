@@ -12,7 +12,7 @@ sidebar_position: 1
 
 :::tip
 わかりやすくするため、`ModeSwitch`という専用のPrefabを用意していますが、中身は  
-通常のスイッチ × 2 ＋ `SwitchSelector` です。
+通常のスイッチ × 2 ＋ [SwitchSelector](../utilities/switch-selector.md) です。
 :::
 
 ### ✨ 特徴
@@ -51,7 +51,11 @@ ModeSwitch_Mirror_x2
 ```
 
 どちらか一方のスイッチを押すと、もう一方は自動的にオフになります。  
-これはSwitchSelector の機能です。
+これは [SwitchSelector](../utilities/switch-selector.md) の機能です。
+
+:::tip
+SwitchSelector の詳細解説はこちら → [SwitchSelector](../utilities/switch-selector.md)
+:::
 
 ## 基本的な使い方
 
