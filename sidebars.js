@@ -66,6 +66,7 @@ const sidebars = {
           ],
         },
         'sliders/slider-collider',
+        'sliders/slider-video',
       ],
     },
     {
